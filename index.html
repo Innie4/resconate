@@ -5,7 +5,7 @@
 </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resconate - Premium Software Development Agency</title>
+    <title>Resconate | Digital Agency & HR-as-a-Service Platform</title>
     <link rel="stylesheet" href="./styles.css">
     <!-- Responsive Enhancement CSS -->
     <link rel="stylesheet" href="./responsive-enhancement.css">
@@ -49,11 +49,12 @@
               
               <span>Resconate</span>
             </a>
-            <nav class="header__nav">
+            <nav class="header__nav" aria-label="Primary navigation">
                 <ul class="header__nav-list">
-                    <li><a href="#home" class="header__nav-link">Home</a></li>
-                    <li><a href="#services" class="header__nav-link">Services</a></li>
-                    <li><a href="#hr-platform" class="header__nav-link">HR Platform</a></li>
+                    <li><a href="#home" class="header__nav-link">Overview</a></li>
+                    <li><a href="#agency-services" class="header__nav-link">Agency Studio</a></li>
+                    <li><a href="#hr-platform" class="header__nav-link">HR Suite</a></li>
+                    <li><a href="#ecosystem" class="header__nav-link">Modules</a></li>
                     <li><a href="#projects" class="header__nav-link">Projects</a></li>
                     <li><a href="#team" class="header__nav-link">Team</a></li>
                     <li><a href="#about" class="header__nav-link">About</a></li>
@@ -61,6 +62,12 @@
                 </ul>
             </nav>
             <div class="header__actions">
+                <a href="hr-login.html" class="btn btn-primary header__cta hidden md:inline-flex" data-analytics="header-cta-hr-login">
+                    Launch HR Portal
+                </a>
+                <a href="#contact" class="btn btn-secondary header__cta hidden md:inline-flex" data-analytics="header-cta-contact">
+                    Book a Discovery Call
+                </a>
                 <button id="mobile-menu-button" class="header__mobile-toggle" aria-label="Open mobile menu" >
                     <i class="fas fa-bars"></i>
                 </button>
@@ -77,9 +84,10 @@
             <div class="mobile-menu__content">
                 <nav class="mobile-menu__nav">
                     <ul class="mobile-menu__nav-list">
-                        <li><a href="#home" class="mobile-menu__nav-link">Home</a></li>
-                        <li><a href="#services" class="mobile-menu__nav-link">Services</a></li>
-                        <li><a href="#hr-platform" class="mobile-menu__nav-link">HR Platform</a></li>
+                        <li><a href="#home" class="mobile-menu__nav-link">Overview</a></li>
+                        <li><a href="#agency-services" class="mobile-menu__nav-link">Agency Studio</a></li>
+                        <li><a href="#hr-platform" class="mobile-menu__nav-link">HR Suite</a></li>
+                        <li><a href="#ecosystem" class="mobile-menu__nav-link">Modules & Portals</a></li>
                         <li><a href="#projects" class="mobile-menu__nav-link">Projects</a></li>
                         <li><a href="#team" class="mobile-menu__nav-link">Team</a></li>
                         <li><a href="#about" class="mobile-menu__nav-link">About</a></li>
@@ -87,45 +95,78 @@
                     </ul>
                 </nav>
                 <div class="mobile-menu__actions">
+                    <a href="hr-login.html" class="btn btn-primary w-full mb-3" data-analytics="mobile-menu-hr-login">
+                        Launch HR Portal
+                    </a>
+                    <a href="employee-login.html" class="btn btn-secondary w-full" data-analytics="mobile-menu-employee-login">
+                        Employee Sign In
+                    </a>
                 </div>
             </div>
         </div>
 
         <!-- Hero Section -->
         <section id="home" class="pt-32 pb-20 px-4 md:px-6 relative overflow-hidden">
-            <div class="container mx-auto text-center relative z-10">
+            <div class="container mx-auto text-center relative z-10 max-w-5xl">
+                <div class="inline-flex items-center justify-center gap-3 mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-200 uppercase tracking-[0.3em]">
+                    <span>Digital Agency</span>
+                    <span class="text-white/50">+</span>
+                    <span>HR-as-a-Service</span>
+                </div>
                 <h1 class="text-4xl md:text-6xl font-bold mb-6 font-plus-jakarta text-white">
-                    We Build Digital Solutions That Drive Results
+                    Build digital products. Run people operations. Scale without friction.
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-200 max-w-3xl mx-auto">
-                    Resconate delivers cutting-edge web and mobile applications that transform businesses and engage users worldwide
+                <p class="text-lg md:text-2xl mb-10 text-gray-200 max-w-4xl mx-auto">
+                    Resconate pairs a seasoned product studio with a full HR platform tailored to African SMEs. We design and ship software, then keep your teams compliant, paid, and supported with multi-tenant HR infrastructure.
                 </p>
-                <div id="projectss" class="flex flex-col md:flex-row justify-center gap-4 mb-16">
-                    <a id="project-btn" href="#projects" class="bg-gradient-to-r from-[#6366F1] to-[#EC4899] text-white font-bold px-8 py-3 rounded-md shadow-lg hover:opacity-90 transition-opacity">
-                        View Our Work
+                <div id="projectss" class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-12">
+                    <a id="project-btn" href="#agency-services" class="btn btn-primary text-white font-semibold px-8 py-3 rounded-md shadow-lg hover:opacity-90 transition-opacity">
+                        Partner with Our Studio
                     </a>
-                    <a href="#contact" class="bg-gradient-to-r from-[#6366F1] to-[#EC4899] text-white font-bold px-8 py-3 rounded-md shadow-lg hover:opacity-90 transition-opacity">
-                        Start Your Project
+                    <a href="hr-login.html" class="btn btn-secondary font-semibold px-8 py-3 rounded-md shadow-lg hover:opacity-90 transition-opacity">
+                        Launch HR Platform
+                    </a>
+                    <a href="#ecosystem" class="btn btn-ghost font-semibold px-8 py-3 rounded-md hover:opacity-90 transition-opacity border border-white/10 text-gray-200">
+                        Explore Ecosystem
                     </a>
                 </div>
-                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16 text-left">
+                    <div class="bg-black/40 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
+                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white mb-4">Digital Agency Studio</h3>
+                        <p class="text-gray-300 mb-6">Strategy, design, and engineering teams delivering platforms, mobile apps, digital experiences, and go-to-market assets for venture-backed startups and established brands.</p>
+                        <ul class="space-y-3 text-gray-300 text-sm md:text-base">
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#6366F1] mt-1"></i> Full product lifecycle: discovery, UX, engineering, QA, launch, and optimisation.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#6366F1] mt-1"></i> Specialists across fintech, marketplaces, healthcare, SaaS, media, and social impact.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#6366F1] mt-1"></i> Embedded squads or turnkey delivery with transparent reporting and KPIs.</li>
+                        </ul>
+                    </div>
+                    <div class="bg-black/40 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
+                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white mb-4">HR-as-a-Service Platform</h3>
+                        <p class="text-gray-300 mb-6">Multi-tenant HR infrastructure built for Nigeria and the African continent—payroll, compliance, recruitment, performance, banking, and employee self-service in one suite.</p>
+                        <ul class="space-y-3 text-gray-300 text-sm md:text-base">
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#EC4899] mt-1"></i> End-to-end HR operations, from hiring workflows to statutory reporting and analytics.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#EC4899] mt-1"></i> Secure portals for admins, HR, executives, and employees with audit-ready records.</li>
+                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#EC4899] mt-1"></i> API-first architecture with bank integrations, payroll automation, and real-time dashboards.</li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- Statistics -->
                 <div id="statistics-box" class="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
                     <div class="stat-card">
-                        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-2" data-count="150">0</div>
-                        <p class="text-gray-200">Projects Completed</p>
+                        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-2" data-count="80">0</div>
+                        <p class="text-gray-200">Digital Products Launched</p>
                     </div>
                     <div class="stat-card">
-                        <div class="text-3xl md:text-4xl font-bold text-[#EC4899] mb-2" data-count="5">0</div>
-                        <p class="text-gray-200">Years Experience</p>
+                        <div class="text-3xl md:text-4xl font-bold text-[#EC4899] mb-2" data-count="45">0</div>
+                        <p class="text-gray-200">Companies on Our HR Suite</p>
                     </div>
                     <div class="stat-card">
-                        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-2" data-count="50">0</div>
-                        <p class="text-gray-200">Happy Clients</p>
+                        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-2" data-count="12">0</div>
+                        <p class="text-gray-200">Integrated HR Modules</p>
                     </div>
                     <div class="stat-card">
-                        <div class="text-3xl md:text-4xl font-bold text-[#EC4899] mb-2" data-count="12">0</div>
-                        <p class="text-gray-200">Technologies</p>
+                        <div class="text-3xl md:text-4xl font-bold text-[#EC4899] mb-2" data-count="6">0</div>
+                        <p class="text-gray-200">Countries Supported</p>
                     </div>
                 </div>
             </div>
@@ -140,11 +181,12 @@
         </section>
 
         <!-- Services Section -->
-        <section id="services" class="container mx-auto py-20 px-4 md:px-6">
+        <span id="agency-services" class="section-anchor" aria-hidden="true"></span>
+        <section id="services" class="container mx-auto py-20 px-4 md:px-6 scroll-mt-28">
             <div class="max-w-3xl mx-auto text-center mb-16">
-                <h3 class="text-lg font-semibold mb-6 font-plus-jakarta text-white">Our Services</h3>
+                <h3 class="text-lg font-semibold mb-6 font-plus-jakarta text-white uppercase tracking-[0.2em] text-white/80">Digital Agency Studio</h3>
                 <p class="text-gray-200 text-lg">
-                    We deliver comprehensive digital solutions that drive business growth and user engagement
+                    We build, launch, and scale web, mobile, and multi-platform products that align brand, experience, and engineering excellence.
                 </p>
             </div>
             
@@ -333,13 +375,30 @@
                         Transform your human resources operations with our comprehensive, cloud-based HR platform designed specifically for Nigerian businesses
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="/hr" class="bg-[#3B82F6] hover:bg-[#1E40AF] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
+                        <a href="hr-login.html" class="bg-[#3B82F6] hover:bg-[#1E40AF] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
                             <i class="fas fa-rocket mr-2"></i>
                             Launch HR Platform
                         </a>
                         <a href="#contact" class="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center">
                             <i class="fas fa-phone mr-2"></i>
                             Schedule Demo
+                        </a>
+                    </div>
+                    <div class="mt-6 text-sm text-gray-300 flex flex-wrap gap-3 justify-center">
+                        <a href="admin-dashboard.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
+                            <i class="fas fa-shield-alt text-xs"></i> Admin Console
+                        </a>
+                        <span class="text-gray-600">•</span>
+                        <a href="hr-dashboard.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
+                            <i class="fas fa-chart-line text-xs"></i> HR Dashboard
+                        </a>
+                        <span class="text-gray-600">•</span>
+                        <a href="employee-portal.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
+                            <i class="fas fa-user-circle text-xs"></i> Employee Self-Service
+                        </a>
+                        <span class="text-gray-600">•</span>
+                        <a href="employee-login.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
+                            <i class="fas fa-sign-in-alt text-xs"></i> Employee Login
                         </a>
                     </div>
                 </div>
@@ -463,6 +522,271 @@
                             <h4 class="font-semibold text-white mb-2">24/7 Support</h4>
                             <p class="text-gray-400 text-sm">Round-the-clock technical support and assistance</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ecosystem Directory -->
+        <section id="ecosystem" class="container mx-auto py-20 px-4 md:px-6 scroll-mt-28">
+            <div class="max-w-4xl mx-auto text-center mb-12 md:mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold font-plus-jakarta text-white mb-6">Explore the Resconate Ecosystem</h2>
+                <p class="text-lg md:text-xl text-gray-300">
+                    Every page in this project is interconnected. Use these quick links to jump into specific HR modules,
+                    operational portals, and agency resources that power our clients and teams.
+                </p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- HR Platform Modules -->
+                <div>
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white">HR Platform Modules</h3>
+                        <a href="hr-login.html" class="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-white transition-colors">
+                            Request module access <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="recruitment-system.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#6366F1]/15 text-[#6366F1]">
+                                <i class="fas fa-user-plus"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Recruitment & Applicant Tracking</p>
+                                <p class="ecosystem-card__description">Create job pipelines, score candidates, and automate hiring workflows for growing teams.</p>
+                                <span class="ecosystem-card__link">
+                                    Open module <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="payroll-management.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#10B981]/15 text-[#10B981]">
+                                <i class="fas fa-money-check-alt"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Payroll & Compensation</p>
+                                <p class="ecosystem-card__description">Automate Nigerian payroll, PAYE, pension, and NHF deductions with audit-ready exports.</p>
+                                <span class="ecosystem-card__link">
+                                    Open module <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="performance-management.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#F59E0B]/15 text-[#F59E0B]">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Performance & OKR Tracking</p>
+                                <p class="ecosystem-card__description">Capture goals, run reviews, and track professional development across distributed teams.</p>
+                                <span class="ecosystem-card__link">
+                                    Open module <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="banking-integration.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#8B5CF6]/15 text-[#8B5CF6]">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Banking Integrations</p>
+                                <p class="ecosystem-card__description">Connect payroll runs to Nigerian banks, automate salary disbursement and tax remittance.</p>
+                                <span class="ecosystem-card__link">
+                                    Open module <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="compliance-reporting.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#EF4444]/15 text-[#EF4444]">
+                                <i class="fas fa-balance-scale"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Compliance & Reporting</p>
+                                <p class="ecosystem-card__description">Generate statutory reports, manage policies, and stay compliant with labour regulations.</p>
+                                <span class="ecosystem-card__link">
+                                    Open module <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="company-registration.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#EC4899]/15 text-[#EC4899]">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Company Registration & Onboarding</p>
+                                <p class="ecosystem-card__description">Set up entities, onboard teams, and configure benefits in minutes with guided workflows.</p>
+                                <span class="ecosystem-card__link">
+                                    Open module <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Operational Portals -->
+                <div>
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white">Operational Portals</h3>
+                        <a href="admin-dashboard.html" class="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-white transition-colors">
+                            View admin controls <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="hr-login.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#3B82F6]/15 text-[#3B82F6]">
+                                <i class="fas fa-sign-in-alt"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">HR Portal Login</p>
+                                <p class="ecosystem-card__description">Secure authentication for HR managers, executives, and platform administrators.</p>
+                                <span class="ecosystem-card__link">
+                                    Launch portal <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="admin-dashboard.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#2563EB]/15 text-[#2563EB]">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Admin Dashboard</p>
+                                <p class="ecosystem-card__description">Manage companies, permissions, users, and platform health with Alpine-powered dashboards.</p>
+                                <span class="ecosystem-card__link">
+                                    Launch dashboard <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="hr-dashboard.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#9333EA]/15 text-[#9333EA]">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">HR Analytics Dashboard</p>
+                                <p class="ecosystem-card__description">Monitor workforce metrics, leave, performance, and compliance from a central control centre.</p>
+                                <span class="ecosystem-card__link">
+                                    Launch dashboard <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="employee-login.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#F97316]/15 text-[#F97316]">
+                                <i class="fas fa-id-card-alt"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Employee Login</p>
+                                <p class="ecosystem-card__description">Allow employees to access payslips, leave balances, and requests in a mobile-first interface.</p>
+                                <span class="ecosystem-card__link">
+                                    Launch login <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="employee-portal.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#0EA5E9]/15 text-[#0EA5E9]">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Employee Self-Service Portal</p>
+                                <p class="ecosystem-card__description">Empower staff to update profiles, submit requests, and collaborate with HR securely.</p>
+                                <span class="ecosystem-card__link">
+                                    Launch portal <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="hr-forgot.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#F43F5E]/15 text-[#F43F5E]">
+                                <i class="fas fa-unlock-alt"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Credentials Recovery</p>
+                                <p class="ecosystem-card__description">Reset passwords and recover HR portal access with secure validation flows.</p>
+                                <span class="ecosystem-card__link">
+                                    Recover access <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Agency Resources -->
+                <div>
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white">Agency Leadership & Case Libraries</h3>
+                        <a href="#team" class="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-white transition-colors">
+                            Meet the team <i class="fas fa-arrow-right text-xs"></i>
+                        </a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <a href="innie-portfolio.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#6366F1]/15 text-[#6366F1]">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Inimfon Udoh — Founder & CTO</p>
+                                <p class="ecosystem-card__description">Full-stack product leadership across fintech, SaaS, and venture-scale platforms.</p>
+                                <span class="ecosystem-card__link">
+                                    View portfolio <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="mike-portfolio.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#EC4899]/15 text-[#EC4899]">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Michael Nwankwo — Frontend Lead</p>
+                                <p class="ecosystem-card__description">Cutting-edge web and mobile experiences with React, Next.js, and performance tooling.</p>
+                                <span class="ecosystem-card__link">
+                                    View portfolio <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="dorcas-portfolio.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#DC2626]/15 text-[#DC2626]">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Dorcas Johnson — Cybersecurity</p>
+                                <p class="ecosystem-card__description">Offensive and defensive security expertise safeguarding digital products and HR data.</p>
+                                <span class="ecosystem-card__link">
+                                    View portfolio <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="emediong-portfolio.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#F59E0B]/15 text-[#F59E0B]">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Emediong Inwek — Product Design</p>
+                                <p class="ecosystem-card__description">Product designer crafting multi-platform interfaces and brand systems at scale.</p>
+                                <span class="ecosystem-card__link">
+                                    View portfolio <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="sherah-portfolio.html" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#10B981]/15 text-[#10B981]">
+                                <i class="fas fa-bullhorn"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Sherah David — Social & Content</p>
+                                <p class="ecosystem-card__description">Storytelling, community, and content operations powering growth for partner brands.</p>
+                                <span class="ecosystem-card__link">
+                                    View portfolio <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
+                        <a href="dorcas-portfolio.html#case-studies" class="ecosystem-card group">
+                            <div class="ecosystem-card__icon bg-[#8B5CF6]/15 text-[#8B5CF6]">
+                                <i class="fas fa-briefcase"></i>
+                            </div>
+                            <div>
+                                <p class="ecosystem-card__title">Case Library & Impact Stories</p>
+                                <p class="ecosystem-card__description">Browse sector-specific case studies, proposals, and delivery frameworks from our archive.</p>
+                                <span class="ecosystem-card__link">
+                                    View resources <i class="fas fa-arrow-right"></i>
+                                </span>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -1017,6 +1341,67 @@ Sent from Resconate Website Contact Form`;
                 </div>
             </div>
         </section>
+
+        <!-- Footer -->
+        <footer class="site-footer border-t border-gray-900/70 bg-black/80 backdrop-blur-sm">
+            <div class="container mx-auto py-16 px-4 md:px-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <div>
+                        <a href="#home" class="flex items-center gap-3 mb-4">
+                            <img src="resconate-logo.png" alt="Resconate" class="w-10 h-10 rounded-full object-cover">
+                            <span class="text-xl font-plus-jakarta font-semibold text-white">Resconate</span>
+                        </a>
+                        <p class="text-sm text-gray-400 leading-relaxed">
+                            A dual engine organisation delivering premium digital products and a full-stack HR platform for growth teams across Africa. Strategy, execution, compliance, and culture in one ecosystem.
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold text-lg mb-4">HR Platform</h4>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="hr-login.html" class="footer-link">HR Portal Login</a></li>
+                            <li><a href="admin-dashboard.html" class="footer-link">Admin Dashboard</a></li>
+                            <li><a href="hr-dashboard.html" class="footer-link">HR Analytics Dashboard</a></li>
+                            <li><a href="employee-login.html" class="footer-link">Employee Login</a></li>
+                            <li><a href="employee-portal.html" class="footer-link">Employee Self-Service</a></li>
+                            <li><a href="hr-forgot.html" class="footer-link">Password Recovery</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold text-lg mb-4">HR Modules</h4>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="recruitment-system.html" class="footer-link">Recruitment & ATS</a></li>
+                            <li><a href="payroll-management.html" class="footer-link">Payroll Automation</a></li>
+                            <li><a href="performance-management.html" class="footer-link">Performance & OKRs</a></li>
+                            <li><a href="banking-integration.html" class="footer-link">Banking Integration</a></li>
+                            <li><a href="compliance-reporting.html" class="footer-link">Compliance Reporting</a></li>
+                            <li><a href="company-registration.html" class="footer-link">Company Registration</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-white font-semibold text-lg mb-4">Agency & Resources</h4>
+                        <ul class="space-y-3 text-sm text-gray-400">
+                            <li><a href="#agency-services" class="footer-link">Digital Agency Studio</a></li>
+                            <li><a href="#projects" class="footer-link">Project Library</a></li>
+                            <li><a href="innie-portfolio.html" class="footer-link">Inimfon Udoh Portfolio</a></li>
+                            <li><a href="mike-portfolio.html" class="footer-link">Michael Nwankwo Portfolio</a></li>
+                            <li><a href="emediong-portfolio.html" class="footer-link">Emediong Inwek Portfolio</a></li>
+                            <li><a href="sherah-portfolio.html" class="footer-link">Sherah David Portfolio</a></li>
+                            <li><a href="dorcas-portfolio.html" class="footer-link">Dorcas Johnson Portfolio</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-12 pt-8 border-t border-gray-900/70 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-gray-500">
+                    <p>&copy; <span id="current-year">2024</span> Resconate. All rights reserved.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="footer-link">Contact</a>
+                        <a href="#ecosystem" class="footer-link">Platform Directory</a>
+                        <a href="#team" class="footer-link">Leadership</a>
+                        <a href="#about" class="footer-link">About Resconate</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
         <!-- Team Member Popup -->
         <div id="teamPopup" class="team-popup">

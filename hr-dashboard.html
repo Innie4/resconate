@@ -20,8 +20,80 @@
             }
         }
     </script>
+    <style>
+        .global-nav {
+            background: #0b1120;
+            border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+        }
+        .global-nav__container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 12px 24px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .global-nav__brand {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #60a5fa;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+        .global-nav__brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .global-nav__links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .global-nav__link {
+            color: #e2e8f0;
+            font-size: 14px;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+        .global-nav__link:hover,
+        .global-nav__link[aria-current="page"] {
+            color: #38bdf8;
+        }
+        @media (max-width: 640px) {
+            .global-nav__container {
+                padding: 12px 16px;
+                justify-content: flex-start;
+            }
+            .global-nav__links {
+                gap: 12px;
+            }
+        }
+    </style>
 </head>
 <body class="bg-gray-50 font-sans" x-data="hrDashboard()">
+    <header class="global-nav">
+        <div class="global-nav__container">
+            <a href="index.html" class="global-nav__brand">
+                <img src="resconate-logo.png" alt="Resconate Logo">
+                <span>Resconate HR Suite</span>
+            </a>
+            <nav class="global-nav__links" aria-label="Resconate navigation">
+                <a href="index.html#home" class="global-nav__link">Main Site</a>
+                <a href="index.html#ecosystem" class="global-nav__link">Platform Directory</a>
+                <a href="hr-login.html" class="global-nav__link">HR Login</a>
+                <a href="admin-dashboard.html" class="global-nav__link">Admin</a>
+                <a href="hr-dashboard.html" class="global-nav__link" aria-current="page">HR Dashboard</a>
+                <a href="employee-login.html" class="global-nav__link">Employee Login</a>
+                <a href="employee-portal.html" class="global-nav__link">Employee Portal</a>
+            </nav>
+        </div>
+    </header>
     <!-- Navigation -->
     <nav class="bg-white shadow-lg border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
