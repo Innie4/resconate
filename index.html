@@ -1,19 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <script src="https://smtpjs.com/v3/smtp.js">
-</script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resconate | Digital Agency & HR-as-a-Service Platform</title>
     <link rel="stylesheet" href="./styles.css">
-    <!-- Responsive Enhancement CSS -->
     <link rel="stylesheet" href="./responsive-enhancement.css">
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -23,41 +19,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=National+Park:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet">
-    <!-- Devicon Icon Library -->
     <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
-    <!-- AOS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-black text-gray-100 font-inter">
     <a href="#home" class="skip-link">Skip to main content</a>
-    <!-- Header -->
+
     <header class="header">
         <div class="header__container">
             <a href="#home" class="header__brand">
-             
                 <img src="resconate-logo.png" alt="Resconate Logo" class="header__logo">
-              
-              <span>Resconate</span>
+                <span>Resconate</span>
             </a>
             <nav class="header__nav" aria-label="Primary navigation">
                 <ul class="header__nav-list">
                     <li><a href="#home" class="header__nav-link">Overview</a></li>
-                    <li><a href="#agency-services" class="header__nav-link">Agency Studio</a></li>
-                    <li><a href="#hr-platform" class="header__nav-link">HR Suite</a></li>
-                    <li><a href="#ecosystem" class="header__nav-link">Modules</a></li>
-                    <li><a href="#projects" class="header__nav-link">Projects</a></li>
-                    <li><a href="#team" class="header__nav-link">Team</a></li>
-                    <li><a href="#about" class="header__nav-link">About</a></li>
+                    <li><a href="#agency-services" class="header__nav-link">Value</a></li>
+                    <li><a href="#hr-platform" class="header__nav-link">Solutions</a></li>
+                    <li><a href="#proof" class="header__nav-link">Proof</a></li>
                     <li><a href="#contact" class="header__nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -68,7 +55,7 @@
                 <a href="#contact" class="btn btn-secondary header__cta hidden md:inline-flex" data-analytics="header-cta-contact">
                     Book a Discovery Call
                 </a>
-                <button id="mobile-menu-button" class="header__mobile-toggle" aria-label="Open mobile menu" >
+                <button id="mobile-menu-button" class="header__mobile-toggle" aria-label="Open mobile menu">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
@@ -76,7 +63,6 @@
     </header>
 
     <main id="main-content">
-        <!-- Mobile menu (hidden by default) -->
         <div id="mobile-menu" class="mobile-menu">
             <button id="close-menu-button" class="mobile-menu__close" aria-label="Close mobile menu">
                 <i class="fas fa-times"></i>
@@ -85,12 +71,9 @@
                 <nav class="mobile-menu__nav">
                     <ul class="mobile-menu__nav-list">
                         <li><a href="#home" class="mobile-menu__nav-link">Overview</a></li>
-                        <li><a href="#agency-services" class="mobile-menu__nav-link">Agency Studio</a></li>
-                        <li><a href="#hr-platform" class="mobile-menu__nav-link">HR Suite</a></li>
-                        <li><a href="#ecosystem" class="mobile-menu__nav-link">Modules & Portals</a></li>
-                        <li><a href="#projects" class="mobile-menu__nav-link">Projects</a></li>
-                        <li><a href="#team" class="mobile-menu__nav-link">Team</a></li>
-                        <li><a href="#about" class="mobile-menu__nav-link">About</a></li>
+                        <li><a href="#agency-services" class="mobile-menu__nav-link">Value</a></li>
+                        <li><a href="#hr-platform" class="mobile-menu__nav-link">Solutions</a></li>
+                        <li><a href="#proof" class="mobile-menu__nav-link">Proof</a></li>
                         <li><a href="#contact" class="mobile-menu__nav-link">Contact</a></li>
                     </ul>
                 </nav>
@@ -105,1333 +88,328 @@
             </div>
         </div>
 
-        <!-- Hero Section -->
-        <section id="home" class="pt-32 pb-20 px-4 md:px-6 relative overflow-hidden">
-            <div class="container mx-auto text-center relative z-10 max-w-5xl">
-                <div class="inline-flex items-center justify-center gap-3 mb-6 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-sm font-medium text-gray-200 uppercase tracking-[0.3em]">
-                    <span>Digital Agency</span>
-                    <span class="text-white/50">+</span>
-                    <span>HR-as-a-Service</span>
-                </div>
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 font-plus-jakarta text-white">
-                    Build digital products. Run people operations. Scale without friction.
-                </h1>
-                <p class="text-lg md:text-2xl mb-10 text-gray-200 max-w-4xl mx-auto">
-                    Resconate pairs a seasoned product studio with a full HR platform tailored to African SMEs. We design and ship software, then keep your teams compliant, paid, and supported with multi-tenant HR infrastructure.
-                </p>
-                <div id="projectss" class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 mb-12">
-                    <a id="project-btn" href="#agency-services" class="btn btn-primary text-white font-semibold px-8 py-3 rounded-md shadow-lg hover:opacity-90 transition-opacity">
-                        Partner with Our Studio
-                    </a>
-                    <a href="hr-login.html" class="btn btn-secondary font-semibold px-8 py-3 rounded-md shadow-lg hover:opacity-90 transition-opacity">
-                        Launch HR Platform
-                    </a>
-                    <a href="#ecosystem" class="btn btn-ghost font-semibold px-8 py-3 rounded-md hover:opacity-90 transition-opacity border border-white/10 text-gray-200">
-                        Explore Ecosystem
-                    </a>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-16 text-left">
-                    <div class="bg-black/40 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
-                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white mb-4">Digital Agency Studio</h3>
-                        <p class="text-gray-300 mb-6">Strategy, design, and engineering teams delivering platforms, mobile apps, digital experiences, and go-to-market assets for venture-backed startups and established brands.</p>
-                        <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#6366F1] mt-1"></i> Full product lifecycle: discovery, UX, engineering, QA, launch, and optimisation.</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#6366F1] mt-1"></i> Specialists across fintech, marketplaces, healthcare, SaaS, media, and social impact.</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#6366F1] mt-1"></i> Embedded squads or turnkey delivery with transparent reporting and KPIs.</li>
-                        </ul>
+        <section id="home" class="hero-section pt-36 md:pt-40 pb-24 px-4 md:px-8 relative overflow-hidden">
+            <div class="hero__glow"></div>
+            <div class="container mx-auto max-w-6xl relative z-10">
+                <div class="hero__grid">
+                    <div class="hero__content" data-animate="fade-up">
+                        <span class="hero__badge">Digital Agency + HR-as-a-Service</span>
+                        <h1 class="hero__title">
+                            Launch magnetic products. Run people operations without drag.
+                        </h1>
+                        <p class="hero__subtitle">
+                            Resconate blends a venture-ready product studio with a compliant HR platform so leaders can scale brand, technology, and teams in one flow.
+                        </p>
+                        <div class="hero__actions">
+                            <a href="#contact" class="btn btn-primary">Book a Discovery Call</a>
+                            <a href="hr-login.html" class="btn btn-secondary">Launch HR Platform</a>
+                            <a href="#hr-platform" class="btn btn-ghost">See the Platform</a>
+                        </div>
+                        <div class="hero__stats">
+                            <div class="hero__stat stat-card">
+                                <span class="hero__stat-number" data-count="80">80+</span>
+                                <span class="hero__stat-label">Products shipped</span>
+                            </div>
+                            <div class="hero__stat stat-card">
+                                <span class="hero__stat-number" data-count="45">45</span>
+                                <span class="hero__stat-label">Teams on Resconate HR</span>
+                            </div>
+                            <div class="hero__stat stat-card">
+                                <span class="hero__stat-number" data-count="6">6</span>
+                                <span class="hero__stat-label">Countries supported</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="bg-black/40 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-sm">
-                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white mb-4">HR-as-a-Service Platform</h3>
-                        <p class="text-gray-300 mb-6">Multi-tenant HR infrastructure built for Nigeria and the African continent—payroll, compliance, recruitment, performance, banking, and employee self-service in one suite.</p>
-                        <ul class="space-y-3 text-gray-300 text-sm md:text-base">
-                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#EC4899] mt-1"></i> End-to-end HR operations, from hiring workflows to statutory reporting and analytics.</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#EC4899] mt-1"></i> Secure portals for admins, HR, executives, and employees with audit-ready records.</li>
-                            <li class="flex items-start gap-3"><i class="fas fa-check text-[#EC4899] mt-1"></i> API-first architecture with bank integrations, payroll automation, and real-time dashboards.</li>
-                        </ul>
+                    <div class="hero__visual" data-animate="fade-up" style="--animate-delay:0.15s">
+                        <div class="hero__visual-card">
+                            <div class="hero__visual-header">
+                                <span>Studio Sprint</span>
+                                <span class="hero__dot hero__dot--purple"></span>
+                                <span class="hero__dot hero__dot--pink"></span>
+                            </div>
+                            <ul class="hero__visual-list">
+                                <li>
+                                    <span>Discovery to launch in 6 weeks</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </li>
+                                <li>
+                                    <span>Embedded squads, transparent KPIs</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </li>
+                                <li>
+                                    <span>Brand, product, and growth assets aligned</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="hero__visual-card hero__visual-card--accent">
+                            <h3>HR Flow</h3>
+                            <p>Payroll, compliance, performance, and banking automations tuned to Nigerian regulations.</p>
+                            <a href="#hr-platform" class="hero__visual-link">
+                                Explore modules <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <!-- Statistics -->
-                <div id="statistics-box" class="grid grid-cols-4 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                    <div class="stat-card">
-                        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-2" data-count="80">0</div>
-                        <p class="text-gray-200">Digital Products Launched</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="text-3xl md:text-4xl font-bold text-[#EC4899] mb-2" data-count="45">0</div>
-                        <p class="text-gray-200">Companies on Our HR Suite</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="text-3xl md:text-4xl font-bold text-[#6366F1] mb-2" data-count="12">0</div>
-                        <p class="text-gray-200">Integrated HR Modules</p>
-                    </div>
-                    <div class="stat-card">
-                        <div class="text-3xl md:text-4xl font-bold text-[#EC4899] mb-2" data-count="6">0</div>
-                        <p class="text-gray-200">Countries Supported</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Background Elements -->
-            <div class="absolute inset-0 bg-gradient-to-br from-black to-gray-900 opacity-50"></div>
-            <div class="absolute inset-0 overflow-hidden">
-                <div class="absolute top-0 left-0 w-full h-full">
-                    <!-- Add animated geometric shapes here -->
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <span id="agency-services" class="section-anchor" aria-hidden="true"></span>
-        <section id="services" class="container mx-auto py-20 px-4 md:px-6 scroll-mt-28">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h3 class="text-lg font-semibold mb-6 font-plus-jakarta text-white uppercase tracking-[0.2em] text-white/80">Digital Agency Studio</h3>
-                <p class="text-gray-200 text-lg">
-                    We build, launch, and scale web, mobile, and multi-platform products that align brand, experience, and engineering excellence.
+        <section id="agency-services" class="section-shell py-20 px-4 md:px-8">
+            <div class="container mx-auto max-w-5xl text-center section-heading" data-animate="fade-up">
+                <span class="section-eyebrow">Value Proposition</span>
+                <h2 class="section-title">A single partner for product velocity and people certainty.</h2>
+                <p class="section-lead">
+                    From the first wireframe to workforce compliance, Resconate removes the handoff gaps that slow growth teams.
                 </p>
             </div>
-            
-            <div id="cords-holds" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                <!-- Web Development Card -->
-                <div id="web-dev-card" class="service-card bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#6366F1] transition-all duration-300">
-                    <div class="w-12 h-12 bg-[#6366F1]/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-globe text-2xl text-[#6366F1]"></i>
+            <div class="container mx-auto max-w-6xl value-grid">
+                <article class="value-card" data-animate="fade-up">
+                    <div class="value-icon value-icon--indigo">
+                        <i class="fas fa-sparkles"></i>
                     </div>
-                    <p class="text-lg font-bold mb-4 text-white">Web Development</p>
-                    <p class="text-gray-200 mb-6">
-                        Custom websites, web applications, and e-commerce solutions built with cutting-edge technologies
-                    </p>
-                    <ul class="space-y-3 text-gray-200 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#6366F1] mr-3"></i>
-                            Custom Website Development
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#6366F1] mr-3"></i>
-                            E-commerce Solutions
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#6366F1] mr-3"></i>
-                            Web Application Development
-                        </li>
+                    <h3>Design-led product studio</h3>
+                    <p>Strategy, UX, engineering, and launch rituals shaped for venture-backed ambitions.</p>
+                    <ul>
+                        <li>Co-create sprints with your leadership.</li>
+                        <li>Ship polished experiences ready for scale.</li>
                     </ul>
-                    <a href="#contact" class="text-[#6366F1] hover:text-[#EC4899] transition-colors inline-flex items-center">
-                        Get Started <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Mobile Development Card -->
-                <div id="web-dev-card" class="service-card bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#EC4899] transition-all duration-300">
-                    <div class="w-12 h-12 bg-[#EC4899]/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-mobile-alt text-2xl text-[#EC4899]"></i>
+                </article>
+                <article class="value-card" data-animate="fade-up" style="--animate-delay:0.1s">
+                    <div class="value-icon value-icon--pink">
+                        <i class="fas fa-people-group"></i>
                     </div>
-                    <p class="text-lg font-bold mb-4 text-white">Mobile Development</p>
-                    <p class="text-gray-200 mb-6">
-                        Native and cross-platform mobile applications that deliver exceptional user experiences
-                    </p>
-                    <ul class="space-y-3 text-gray-200 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#EC4899] mr-3"></i>
-                            iOS & Android Development
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#EC4899] mr-3"></i>
-                            Cross-platform Solutions
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#EC4899] mr-3"></i>
-                            App Maintenance & Support
-                        </li>
+                    <h3>HR-as-a-Service backbone</h3>
+                    <p>Localised payroll, compliance, and employee journeys automated for African markets.</p>
+                    <ul>
+                        <li>Multi-tenant suite with role-based portals.</li>
+                        <li>Audit-ready workflows across every module.</li>
                     </ul>
-                    <a href="#contact" class="text-[#EC4899] hover:text-[#6366F1] transition-colors inline-flex items-center">
-                        Get Started <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- UI/UX Design Card -->
-                <div id="web-dev-card"class="service-card bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#10B981] transition-all duration-300">
-                    <div class="w-12 h-12 bg-[#10B981]/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-palette text-2xl text-[#10B981]"></i>
+                </article>
+                <article class="value-card" data-animate="fade-up" style="--animate-delay:0.2s">
+                    <div class="value-icon value-icon--emerald">
+                        <i class="fas fa-link"></i>
                     </div>
-                    <p class="text-lg font-bold mb-4 text-white">UI/UX Design</p>
-                    <p class="text-gray-200 mb-6">
-                        Beautiful, intuitive user interfaces and seamless user experiences that delight users
-                    </p>
-                    <ul class="space-y-3 text-gray-200 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#10B981] mr-3"></i>
-                            User Interface Design
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#10B981] mr-3"></i>
-                            User Experience Design
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#10B981] mr-3"></i>
-                            Prototyping & Wireframing
-                        </li>
+                    <h3>Continuous partnership</h3>
+                    <p>One Resconate team stays embedded to evolve product releases and people operations together.</p>
+                    <ul>
+                        <li>Lifecycle analytics and growth experiments.</li>
+                        <li>Dedicated success pod in your timezone.</li>
                     </ul>
-                    <a href="#contact" class="text-[#10B981] hover:text-[#6366F1] transition-colors inline-flex items-center">
-                        Get Started <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Digital Marketing Card -->
-                <div id="web-dev-card" class="service-card bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#F59E0B] transition-all duration-300">
-                    <div class="w-12 h-12 bg-[#F59E0B]/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-bullhorn text-2xl text-[#F59E0B]"></i>
-                    </div>
-                    <p class="text-lg font-bold mb-4 text-white">Digital Marketing</p>
-                    <p class="text-gray-200 mb-6">
-                        Strategic digital marketing campaigns that increase brand awareness and drive conversions
-                    </p>
-                    <ul class="space-y-3 text-gray-200 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#F59E0B] mr-3"></i>
-                            SEO & Content Marketing
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#F59E0B] mr-3"></i>
-                            Social Media Marketing
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#F59E0B] mr-3"></i>
-                            PPC & Google Ads
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-[#F59E0B] hover:text-[#6366F1] transition-colors inline-flex items-center">
-                        Get Started <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Cloud Solutions Card -->
-                <div id="web-dev-card"class="service-card bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#8B5CF6] transition-all duration-300">
-                    <div class="w-12 h-12 bg-[#8B5CF6]/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-cloud text-lg text-[#8B5CF6]"></i>
-                    </div>
-                    <p class="text-sm font-bold mb-4 text-white">CyberSecurity</p>
-                    <p class="text-gray-200 mb-6">
-                        Comprehensive security solutions to protect your digital assets and infrastructure
-                    </p>
-                    <ul class="space-y-3 text-gray-200 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#8B5CF6] mr-3"></i>
-                            Security Audits & Assessments
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#8B5CF6] mr-3"></i>
-                            Penetration Testing
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#8B5CF6] mr-3"></i>
-                            Security Monitoring & Response
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-[#8B5CF6] hover:text-[#6366F1] transition-colors inline-flex items-center">
-                        Get Started <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
-
-                <!-- Consulting Services Card -->
-                <div id="web-dev-card" class="service-card bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#EF4444] transition-all duration-300">
-                    <div class="w-12 h-12 bg-[#EF4444]/20 rounded-lg flex items-center justify-center mb-6">
-                        <i class="fas fa-chart-line text-2xl text-[#EF4444]"></i>
-                    </div>
-                    <p class="text-lg font-bold mb-4 text-white">Graphic Design</p>
-                    <p class="text-gray-200 mb-6">
-                        Creative visual solutions including logos, branding, marketing materials, and digital graphics
-                    </p>
-                    <ul class="space-y-3 text-gray-200 mb-6">
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#EF4444] mr-3"></i>
-                            Logo & Brand Identity Design
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#EF4444] mr-3"></i>
-                            Marketing Materials & Flyers
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-check text-[#EF4444] mr-3"></i>
-                            Digital Graphics & Illustrations
-                        </li>
-                    </ul>
-                    <a href="#contact" class="text-[#EF4444] hover:text-[#6366F1] transition-colors inline-flex items-center">
-                        Get Started <i class="fas fa-arrow-right ml-2"></i>
-                    </a>
-                </div>
+                </article>
             </div>
         </section>
 
-        <!-- HR as a Service Section -->
-        <section id="hr-platform" class="container mx-auto py-20 px-4 md:px-6 bg-gradient-to-br from-blue-900/20 to-purple-900/20 rounded-3xl my-16">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <div class="inline-block px-4 py-2 bg-[#3B82F6] bg-opacity-20 text-[#3B82F6] rounded-full text-sm font-medium mb-4">
-                        HR AS A SERVICE
-                    </div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6 font-plus-jakarta text-white">
-                        Complete HR Management Platform
-                    </h2>
-                    <p class="text-xl text-gray-200 max-w-3xl mx-auto mb-8">
-                        Transform your human resources operations with our comprehensive, cloud-based HR platform designed specifically for Nigerian businesses
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <a href="hr-login.html" class="bg-[#3B82F6] hover:bg-[#1E40AF] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105 inline-flex items-center justify-center">
-                            <i class="fas fa-rocket mr-2"></i>
-                            Launch HR Platform
-                        </a>
-                        <a href="#contact" class="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 inline-flex items-center justify-center">
-                            <i class="fas fa-phone mr-2"></i>
-                            Schedule Demo
-                        </a>
-                    </div>
-                    <div class="mt-6 text-sm text-gray-300 flex flex-wrap gap-3 justify-center">
-                        <a href="admin-dashboard.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
-                            <i class="fas fa-shield-alt text-xs"></i> Admin Console
-                        </a>
-                        <span class="text-gray-600">•</span>
-                        <a href="hr-dashboard.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
-                            <i class="fas fa-chart-line text-xs"></i> HR Dashboard
-                        </a>
-                        <span class="text-gray-600">•</span>
-                        <a href="employee-portal.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
-                            <i class="fas fa-user-circle text-xs"></i> Employee Self-Service
-                        </a>
-                        <span class="text-gray-600">•</span>
-                        <a href="employee-login.html" class="inline-flex items-center gap-2 hover:text-white transition-colors">
-                            <i class="fas fa-sign-in-alt text-xs"></i> Employee Login
-                        </a>
-                    </div>
-                </div>
-
-                <!-- HR Features Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Employee Management -->
-                    <div class="bg-black/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#3B82F6] transition-all duration-300">
-                        <div class="w-12 h-12 bg-[#3B82F6]/20 rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-users text-2xl text-[#3B82F6]"></i>
+        <section id="hr-platform" class="section-shell section-shell--gradient py-20 px-4 md:px-8">
+            <div class="container mx-auto max-w-6xl">
+                <div class="platform-grid">
+                    <div class="platform-intro" data-animate="fade-up">
+                        <span class="section-eyebrow">Platform Highlights</span>
+                        <h2 class="section-title">Everything leaders need to power product and people lifecycles.</h2>
+                        <p class="section-lead">Modules are modular yet orchestrated—pick the capabilities you need and turn on the rest as your team grows.</p>
+                        <div class="platform-actions">
+                            <a href="hr-login.html" class="btn btn-primary">Launch HR Suite</a>
+                            <a href="#contact" class="btn btn-ghost">Talk to our team</a>
                         </div>
-                        <h3 class="text-lg font-bold mb-3 text-white">Employee Management</h3>
-                        <p class="text-gray-300 mb-4">Complete employee lifecycle management with self-service portal and automated workflows</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i class="fas fa-check text-[#3B82F6] mr-2"></i>Employee Directory & Profiles</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#3B82F6] mr-2"></i>Leave Management System</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#3B82F6] mr-2"></i>Self-Service Employee Portal</li>
-                        </ul>
                     </div>
-
-                    <!-- Payroll System -->
-                    <div class="bg-black/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#10B981] transition-all duration-300">
-                        <div class="w-12 h-12 bg-[#10B981]/20 rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-money-bill-wave text-2xl text-[#10B981]"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3 text-white">Nigerian Payroll System</h3>
-                        <p class="text-gray-300 mb-4">Automated payroll processing with full Nigerian tax compliance and statutory deductions</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i class="fas fa-check text-[#10B981] mr-2"></i>PAYE Tax Calculations</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#10B981] mr-2"></i>Pension & NHF Deductions</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#10B981] mr-2"></i>Automated Salary Processing</li>
-                        </ul>
-                    </div>
-
-                    <!-- Recruitment System -->
-                    <div class="bg-black/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#EC4899] transition-all duration-300">
-                        <div class="w-12 h-12 bg-[#EC4899]/20 rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-user-plus text-2xl text-[#EC4899]"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3 text-white">Recruitment & Hiring</h3>
-                        <p class="text-gray-300 mb-4">End-to-end recruitment management from job posting to candidate onboarding</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i class="fas fa-check text-[#EC4899] mr-2"></i>Job Posting & Management</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#EC4899] mr-2"></i>Candidate Tracking System</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#EC4899] mr-2"></i>Interview Scheduling</li>
-                        </ul>
-                    </div>
-
-                    <!-- Performance Management -->
-                    <div class="bg-black/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#F59E0B] transition-all duration-300">
-                        <div class="w-12 h-12 bg-[#F59E0B]/20 rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-chart-bar text-2xl text-[#F59E0B]"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3 text-white">Performance Management</h3>
-                        <p class="text-gray-300 mb-4">Goal setting, performance reviews, and employee development tracking</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i class="fas fa-check text-[#F59E0B] mr-2"></i>Goal Setting & Tracking</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#F59E0B] mr-2"></i>Performance Reviews</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#F59E0B] mr-2"></i>Training Management</li>
-                        </ul>
-                    </div>
-
-                    <!-- Banking Integration -->
-                    <div class="bg-black/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#8B5CF6] transition-all duration-300">
-                        <div class="w-12 h-12 bg-[#8B5CF6]/20 rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-university text-2xl text-[#8B5CF6]"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3 text-white">Banking Integration</h3>
-                        <p class="text-gray-300 mb-4">Seamless integration with Nigerian banks for automated payments and tax remittance</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i class="fas fa-check text-[#8B5CF6] mr-2"></i>Bank Account Integration</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#8B5CF6] mr-2"></i>Automated Salary Payments</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#8B5CF6] mr-2"></i>Tax Remittance Automation</li>
-                        </ul>
-                    </div>
-
-                    <!-- Compliance & Reporting -->
-                    <div class="bg-black/30 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#EF4444] transition-all duration-300">
-                        <div class="w-12 h-12 bg-[#EF4444]/20 rounded-lg flex items-center justify-center mb-4">
-                            <i class="fas fa-shield-alt text-2xl text-[#EF4444]"></i>
-                        </div>
-                        <h3 class="text-lg font-bold mb-3 text-white">Compliance & Reporting</h3>
-                        <p class="text-gray-300 mb-4">Automated regulatory reporting and policy management for Nigerian labor laws</p>
-                        <ul class="space-y-2 text-sm text-gray-400">
-                            <li class="flex items-center"><i class="fas fa-check text-[#EF4444] mr-2"></i>Regulatory Compliance</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#EF4444] mr-2"></i>Automated Reports</li>
-                            <li class="flex items-center"><i class="fas fa-check text-[#EF4444] mr-2"></i>Policy Management</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Platform Benefits -->
-                <div class="mt-16 text-center">
-                    <h3 class="text-2xl font-bold mb-8 text-white">Why Choose Our HR Platform?</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-[#3B82F6]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-flag-nigeria text-2xl text-[#3B82F6]"></i>
+                    <div class="feature-grid">
+                        <article class="feature-card" data-animate="fade-up" style="--animate-delay:0.05s">
+                            <div class="feature-icon feature-icon--indigo">
+                                <i class="fas fa-diagram-project"></i>
                             </div>
-                            <h4 class="font-semibold text-white mb-2">Nigerian Compliant</h4>
-                            <p class="text-gray-400 text-sm">Built specifically for Nigerian labor laws and tax regulations</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-[#10B981]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-building text-2xl text-[#10B981]"></i>
+                            <h3>Unified delivery playbooks</h3>
+                            <p>Discovery rituals, research libraries, and release dashboards keep every squad in lockstep.</p>
+                        </article>
+                        <article class="feature-card" data-animate="fade-up" style="--animate-delay:0.1s">
+                            <div class="feature-icon feature-icon--pink">
+                                <i class="fas fa-money-check-dollar"></i>
                             </div>
-                            <h4 class="font-semibold text-white mb-2">Multi-Tenant</h4>
-                            <p class="text-gray-400 text-sm">Secure, isolated environments for multiple companies</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-[#EC4899]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-mobile-alt text-2xl text-[#EC4899]"></i>
+                            <h3>Payroll & compliance automation</h3>
+                            <p>Local tax logic, benefits orchestration, and statutory filings handled in real time.</p>
+                        </article>
+                        <article class="feature-card" data-animate="fade-up" style="--animate-delay:0.15s">
+                            <div class="feature-icon feature-icon--emerald">
+                                <i class="fas fa-user-chart"></i>
                             </div>
-                            <h4 class="font-semibold text-white mb-2">Mobile Ready</h4>
-                            <p class="text-gray-400 text-sm">Responsive design works perfectly on all devices</p>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-16 h-16 bg-[#F59E0B]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-clock text-2xl text-[#F59E0B]"></i>
+                            <h3>Performance & culture intelligence</h3>
+                            <p>Track OKRs, pulse surveys, and growth plans with insights surfaced to leadership.</p>
+                        </article>
+                        <article class="feature-card" data-animate="fade-up" style="--animate-delay:0.2s">
+                            <div class="feature-icon feature-icon--amber">
+                                <i class="fas fa-plug"></i>
                             </div>
-                            <h4 class="font-semibold text-white mb-2">24/7 Support</h4>
-                            <p class="text-gray-400 text-sm">Round-the-clock technical support and assistance</p>
-                        </div>
+                            <h3>Banking & API connectivity</h3>
+                            <p>Secure integrations with regional banks, identity partners, and custom business systems.</p>
+                        </article>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Ecosystem Directory -->
-        <section id="ecosystem" class="container mx-auto py-20 px-4 md:px-6 scroll-mt-28">
-            <div class="max-w-4xl mx-auto text-center mb-12 md:mb-16">
-                <h2 class="text-3xl md:text-5xl font-bold font-plus-jakarta text-white mb-6">Explore the Resconate Ecosystem</h2>
-                <p class="text-lg md:text-xl text-gray-300">
-                    Every page in this project is interconnected. Use these quick links to jump into specific HR modules,
-                    operational portals, and agency resources that power our clients and teams.
-                </p>
+        <section id="ecosystem" class="section-shell py-20 px-4 md:px-8">
+            <div class="container mx-auto max-w-5xl text-center section-heading" data-animate="fade-up">
+                <span class="section-eyebrow">Experience Layers</span>
+                <h2 class="section-title">Modular journeys that feel cohesive end to end.</h2>
+                <p class="section-lead">Resconate pairs premium product storytelling with operational guardrails so your brand feels elevated across every touchpoint.</p>
             </div>
-
-            <div class="space-y-16">
-                <!-- HR Platform Modules -->
-                <div>
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white">HR Platform Modules</h3>
-                        <a href="hr-login.html" class="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-white transition-colors">
-                            Request module access <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
+            <div class="container mx-auto max-w-6xl layer-grid">
+                <article class="layer-card" data-animate="fade-up">
+                    <div class="layer-meta">
+                        <span class="layer-pill">Studio</span>
+                        <span class="layer-time">0 → 6 weeks</span>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <a href="recruitment-system.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#6366F1]/15 text-[#6366F1]">
-                                <i class="fas fa-user-plus"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Recruitment & Applicant Tracking</p>
-                                <p class="ecosystem-card__description">Create job pipelines, score candidates, and automate hiring workflows for growing teams.</p>
-                                <span class="ecosystem-card__link">
-                                    Open module <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="payroll-management.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#10B981]/15 text-[#10B981]">
-                                <i class="fas fa-money-check-alt"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Payroll & Compensation</p>
-                                <p class="ecosystem-card__description">Automate Nigerian payroll, PAYE, pension, and NHF deductions with audit-ready exports.</p>
-                                <span class="ecosystem-card__link">
-                                    Open module <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="performance-management.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#F59E0B]/15 text-[#F59E0B]">
-                                <i class="fas fa-chart-line"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Performance & OKR Tracking</p>
-                                <p class="ecosystem-card__description">Capture goals, run reviews, and track professional development across distributed teams.</p>
-                                <span class="ecosystem-card__link">
-                                    Open module <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="banking-integration.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#8B5CF6]/15 text-[#8B5CF6]">
-                                <i class="fas fa-university"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Banking Integrations</p>
-                                <p class="ecosystem-card__description">Connect payroll runs to Nigerian banks, automate salary disbursement and tax remittance.</p>
-                                <span class="ecosystem-card__link">
-                                    Open module <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="compliance-reporting.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#EF4444]/15 text-[#EF4444]">
-                                <i class="fas fa-balance-scale"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Compliance & Reporting</p>
-                                <p class="ecosystem-card__description">Generate statutory reports, manage policies, and stay compliant with labour regulations.</p>
-                                <span class="ecosystem-card__link">
-                                    Open module <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="company-registration.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#EC4899]/15 text-[#EC4899]">
-                                <i class="fas fa-building"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Company Registration & Onboarding</p>
-                                <p class="ecosystem-card__description">Set up entities, onboard teams, and configure benefits in minutes with guided workflows.</p>
-                                <span class="ecosystem-card__link">
-                                    Open module <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
+                    <h3>Concept to launch orchestration</h3>
+                    <p>Brand positioning, UI systems, engineering, QA, and GTM assets shipped as a single narrative.</p>
+                    <a href="#agency-services" class="layer-link">See how we work <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="layer-card" data-animate="fade-up" style="--animate-delay:0.12s">
+                    <div class="layer-meta">
+                        <span class="layer-pill layer-pill--pink">People</span>
+                        <span class="layer-time">Always-on</span>
+                    </div>
+                    <h3>HR cockpit for African teams</h3>
+                    <p>Role-based portals, smart approvals, and compliance automation tuned to local legislation.</p>
+                    <a href="hr-dashboard.html" class="layer-link" target="_blank" rel="noopener">Peek inside the suite <i class="fas fa-arrow-right"></i></a>
+                </article>
+                <article class="layer-card" data-animate="fade-up" style="--animate-delay:0.24s">
+                    <div class="layer-meta">
+                        <span class="layer-pill layer-pill--emerald">Support</span>
+                        <span class="layer-time">Ongoing</span>
+                    </div>
+                    <h3>Growth & adoption programs</h3>
+                    <p>Change management, enablement, and analytics sprints to keep teams energised after launch.</p>
+                    <a href="#contact" class="layer-link">Schedule a working session <i class="fas fa-arrow-right"></i></a>
+                </article>
+            </div>
+        </section>
+
+        <section id="proof" class="section-shell section-shell--slate py-20 px-4 md:px-8">
+            <div class="container mx-auto max-w-5xl text-center section-heading" data-animate="fade-up">
+                <span class="section-eyebrow">Proof</span>
+                <h2 class="section-title">Trusted by teams shipping category-defining experiences.</h2>
+            </div>
+            <div class="container mx-auto max-w-5xl logos-line" data-animate="fade-up">
+                <span>FedAPI</span>
+                <span>Solarmac</span>
+                <span>NX Labs</span>
+                <span>KHOJ</span>
+                <span>DSA</span>
+            </div>
+            <div class="container mx-auto max-w-5xl testimonial-grid">
+                <article class="testimonial-card" data-animate="fade-up">
+                    <p>"Resconate carried us from insight to launch with clarity. We shipped a robust digital product without pausing operations."</p>
+                    <div class="testimonial-meta">
+                        <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=120&q=80" alt="Client portrait">
+                        <div>
+                            <span class="testimonial-name">Adaeze N.</span>
+                            <span class="testimonial-role">COO, Fintech Startup</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="testimonial-card" data-animate="fade-up" style="--animate-delay:0.1s">
+                    <p>"Payroll, compliance, and performance reviews run on autopilot now. The Resconate team remains on-call like an internal squad."</p>
+                    <div class="testimonial-meta">
+                        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=120&q=80" alt="Client portrait">
+                        <div>
+                            <span class="testimonial-name">Derrick A.</span>
+                            <span class="testimonial-role">People Lead, Growth Company</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contact" class="section-shell py-20 px-4 md:px-8">
+            <div class="container mx-auto max-w-4xl cta-shell">
+                <div class="cta-content" data-animate="fade-up">
+                    <span class="section-eyebrow">Next Step</span>
+                    <h2 class="section-title">Let’s orchestrate your next product and people milestone.</h2>
+                    <p class="section-lead">Tell us where you want momentum—we’ll respond within one business day.</p>
+                    <div class="cta-actions">
+                        <a href="mailto:hello@resconate.com" class="btn btn-primary">Email Us</a>
+                        <a href="https://wa.me/2349072415907" class="btn btn-secondary" target="_blank" rel="noopener">Start WhatsApp Chat</a>
                     </div>
                 </div>
-
-                <!-- Operational Portals -->
-                <div>
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white">Operational Portals</h3>
-                        <a href="admin-dashboard.html" class="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-white transition-colors">
-                            View admin controls <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
+                <div class="contact-card" data-animate="fade-up" style="--animate-delay:0.1s">
+                    <div class="contact-row">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <a href="mailto:inimfonudoh2004@gmail.com">inimfonudoh2004@gmail.com</a>
+                        </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <a href="hr-login.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#3B82F6]/15 text-[#3B82F6]">
-                                <i class="fas fa-sign-in-alt"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">HR Portal Login</p>
-                                <p class="ecosystem-card__description">Secure authentication for HR managers, executives, and platform administrators.</p>
-                                <span class="ecosystem-card__link">
-                                    Launch portal <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="admin-dashboard.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#2563EB]/15 text-[#2563EB]">
-                                <i class="fas fa-user-shield"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Admin Dashboard</p>
-                                <p class="ecosystem-card__description">Manage companies, permissions, users, and platform health with Alpine-powered dashboards.</p>
-                                <span class="ecosystem-card__link">
-                                    Launch dashboard <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="hr-dashboard.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#9333EA]/15 text-[#9333EA]">
-                                <i class="fas fa-tachometer-alt"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">HR Analytics Dashboard</p>
-                                <p class="ecosystem-card__description">Monitor workforce metrics, leave, performance, and compliance from a central control centre.</p>
-                                <span class="ecosystem-card__link">
-                                    Launch dashboard <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="employee-login.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#F97316]/15 text-[#F97316]">
-                                <i class="fas fa-id-card-alt"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Employee Login</p>
-                                <p class="ecosystem-card__description">Allow employees to access payslips, leave balances, and requests in a mobile-first interface.</p>
-                                <span class="ecosystem-card__link">
-                                    Launch login <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="employee-portal.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#0EA5E9]/15 text-[#0EA5E9]">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Employee Self-Service Portal</p>
-                                <p class="ecosystem-card__description">Empower staff to update profiles, submit requests, and collaborate with HR securely.</p>
-                                <span class="ecosystem-card__link">
-                                    Launch portal <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="hr-forgot.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#F43F5E]/15 text-[#F43F5E]">
-                                <i class="fas fa-unlock-alt"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Credentials Recovery</p>
-                                <p class="ecosystem-card__description">Reset passwords and recover HR portal access with secure validation flows.</p>
-                                <span class="ecosystem-card__link">
-                                    Recover access <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
+                    <div class="contact-row">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <span class="contact-label">Phone</span>
+                            <a href="tel:+2348066023759">+234 806 602 3759</a>
+                        </div>
                     </div>
-                </div>
-
-                <!-- Agency Resources -->
-                <div>
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-                        <h3 class="text-2xl font-plus-jakarta font-semibold text-white">Agency Leadership & Case Libraries</h3>
-                        <a href="#team" class="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-white transition-colors">
-                            Meet the team <i class="fas fa-arrow-right text-xs"></i>
-                        </a>
+                    <div class="contact-row">
+                        <i class="fas fa-location-dot"></i>
+                        <div>
+                            <span class="contact-label">HQ</span>
+                            <p>Plot 51 G-Line, Ewet Housing Estate, Uyo, Nigeria</p>
+                        </div>
                     </div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        <a href="innie-portfolio.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#6366F1]/15 text-[#6366F1]">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Inimfon Udoh — Founder & CTO</p>
-                                <p class="ecosystem-card__description">Full-stack product leadership across fintech, SaaS, and venture-scale platforms.</p>
-                                <span class="ecosystem-card__link">
-                                    View portfolio <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/inimfon-udoh-b5b569222/" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
                         </a>
-                        <a href="mike-portfolio.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#EC4899]/15 text-[#EC4899]">
-                                <i class="fas fa-laptop-code"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Michael Nwankwo — Frontend Lead</p>
-                                <p class="ecosystem-card__description">Cutting-edge web and mobile experiences with React, Next.js, and performance tooling.</p>
-                                <span class="ecosystem-card__link">
-                                    View portfolio <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
+                        <a href="https://www.instagram.com/resconate" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
                         </a>
-                        <a href="dorcas-portfolio.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#DC2626]/15 text-[#DC2626]">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Dorcas Johnson — Cybersecurity</p>
-                                <p class="ecosystem-card__description">Offensive and defensive security expertise safeguarding digital products and HR data.</p>
-                                <span class="ecosystem-card__link">
-                                    View portfolio <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="emediong-portfolio.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#F59E0B]/15 text-[#F59E0B]">
-                                <i class="fas fa-palette"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Emediong Inwek — Product Design</p>
-                                <p class="ecosystem-card__description">Product designer crafting multi-platform interfaces and brand systems at scale.</p>
-                                <span class="ecosystem-card__link">
-                                    View portfolio <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="sherah-portfolio.html" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#10B981]/15 text-[#10B981]">
-                                <i class="fas fa-bullhorn"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Sherah David — Social & Content</p>
-                                <p class="ecosystem-card__description">Storytelling, community, and content operations powering growth for partner brands.</p>
-                                <span class="ecosystem-card__link">
-                                    View portfolio <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
-                        </a>
-                        <a href="dorcas-portfolio.html#case-studies" class="ecosystem-card group">
-                            <div class="ecosystem-card__icon bg-[#8B5CF6]/15 text-[#8B5CF6]">
-                                <i class="fas fa-briefcase"></i>
-                            </div>
-                            <div>
-                                <p class="ecosystem-card__title">Case Library & Impact Stories</p>
-                                <p class="ecosystem-card__description">Browse sector-specific case studies, proposals, and delivery frameworks from our archive.</p>
-                                <span class="ecosystem-card__link">
-                                    View resources <i class="fas fa-arrow-right"></i>
-                                </span>
-                            </div>
+                        <a href="https://www.facebook.com/resconate" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
                         </a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- About Section -->
-        <section id="about" class="container mx-auto py-16 px-4 md:px-6">
-            <div class="max-w-3xl mx-auto text-center">
-                <div class="inline-block px-3 py-1 bg-[#6366F1] bg-opacity-20 text-[#6366F1] rounded-full text-sm font-medium mb-4">
-                    ABOUT US
-                </div>
-                <h2 class="text-3xl font-bold mb-6 font-plus-jakarta">Our Story</h2>
-                <p class="text-gray-200 mb-8">
-                    Resconate is a premier digital agency that has been transforming businesses through innovative solutions since 2019. Our diverse team of expert developers, designers, marketers, and consultants work together to deliver comprehensive digital solutions that drive real business results across all industries and sectors.
-                </p>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-[#6366F1]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-rocket text-2xl text-[#6366F1]"></i>
-                        </div>
-                        <p class="text-xl font-bold mb-2">Our Mission</p>
-                        <p class="text-gray-200">To empower businesses with innovative digital solutions that drive growth and success across all sectors</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-[#EC4899]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-eye text-2xl text-[#EC4899]"></i>
-                        </div>
-                        <p class="text-xl font-bold mb-2">Our Vision</p>
-                        <p class="text-gray-200">To be the leading force in digital transformation and innovation for businesses worldwide</p>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-16 h-16 bg-[#6366F1]/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-heart text-2xl text-[#6366F1]"></i>
-                        </div>
-                        <p class="text-xl font-bold mb-2">Our Values</p>
-                        <p class="text-gray-200">Innovation, Excellence, Collaboration, and Client Success</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Project Section -->
-        <section id="projects" class="py-20 bg-black/80 border-t border-b border-gray-800">
-          <div class="container mx-auto flex flex-col md:flex-row gap-8">
-            <!-- Categories Column -->
-            <aside class="w-full md:w-1/4 mb-8 md:mb-0">
-              <nav id="project-categories" class="flex flex-col gap-4">
-                <button class="category-btn" data-category="web">Web Development</button>
-                <button class="category-btn" data-category="mobile">Mobile Development</button>
-                <button class="category-btn" data-category="design">Product Design</button>
-                <button class="category-btn" data-category="writing">Writing</button>
-                <button class="category-btn" data-category="cybersecurity">Cybersecurity</button>
-                <!-- Add more categories as needed -->
-              </nav>
-            </aside>
-            <!-- Projects Grid -->
-            <div class="w-full md:w-3/4">
-              <div id="project-grid-wrapper" class="overflow-hidden">
-                <div id="project-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 opacity-0 translate-x-[-40px] pointer-events-none transition-all duration-500"></div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Team Section -->
-        <section id="team" class="container mx-auto py-16 px-4 md:px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 font-plus-jakarta">The Minds Behind The Magic</h2>
-                <p class="text-gray-200 text-lg">
-                    Meet our team of expert developers, designers, and project managers
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
-                <!-- Team Member 1 -->
-                <div class="team-card bg-black/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 hover:border-[#EC4899] transition-all duration-300 cursor-pointer" data-modal-type="team" data-modal-id="innie" onclick="openTeamPopup('innie')" tabindex="0" role="button" aria-label="View Inimfon Udoh Portfolio">
-                    <div class="relative">
-                       
-                          <img src="innie.jpg" alt="Inimfon Udoh" class="w-full h-64 object-cover">
-                        
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div class="flex space-x-4">
-                                <a href="https://www.linkedin.com/in/inimfon-udoh-b5b569222/" class="text-white hover:text-[#6366F1] transition-colors" aria-label="LinkedIn profile" title="LinkedIn profile">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://github.com/Innie4" class="text-white hover:text-[#6366F1] transition-colors" aria-label="GitHub profile" title="GitHub profile">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                                <a href="https://www.facebook.com/innie.udoh/" class="text-white hover:text-[#6366F1] transition-colors" aria-label="Facebook profile" title="Facebook profile">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="mailto:inimfonudoh2004@gmail.com" class="text-white hover:text-[#6366F1] transition-colors" aria-label="Email" title="Email">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Inimfon Udoh</h3>
-                        <p class="text-[#6366F1] mb-4">CEO & Lead Fullstack Developer</p>
-                        <p class="text-gray-200 text-sm mb-4">
-                            Full-stack developer with 5+ years of experience in building scalable applications
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-[#6366F1]/20 text-[#6366F1] rounded-full text-sm">React Native</span>
-                            <span class="px-3 py-1 bg-[#6366F1]/20 text-[#6366F1] rounded-full text-sm">NextJS</span>
-                            <span class="px-3 py-1 bg-[#6366F1]/20 text-[#6366F1] rounded-full text-sm">Flutter</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 2 -->
-                <div class="team-card bg-black/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 hover:border-[#EC4899] transition-all duration-300 cursor-pointer" data-modal-type="team" data-modal-id="michael" onclick="openTeamPopup('michael')" tabindex="0" role="button" aria-label="View Michael Nwankwo Portfolio">
-                    <div class="relative">
-                     
-                          <img src="mike.jpg" alt="Michael Nwankwo" class="w-full h-64 object-cover">
-                       
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div class="flex space-x-4">
-                                <a href="https://x.com/@RnaEu_" class="text-white hover:text-[#EC4899] transition-colors" aria-label="Twitter profile" title="Twitter profile">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://github.com/Michael47009" class="text-white hover:text-[#EC4899] transition-colors" aria-label="GitHub profile" title="GitHub profile">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Michael Nwankwo</h3>
-                        <p class="text-[#EC4899] mb-4">Lead Frontend Developer</p>
-                        <p class="text-gray-200 text-sm mb-4">
-                            Web development expert specializing in frontend building of web applications
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-[#EC4899]/20 text-[#EC4899] rounded-full text-sm">ReactJS</span>
-                            <span class="px-3 py-1 bg-[#EC4899]/20 text-[#EC4899] rounded-full text-sm">NextJS</span>
-                            <span class="px-3 py-1 bg-[#EC4899]/20 text-[#EC4899] rounded-full text-sm">Design</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 3 -->
-                <div class="team-card bg-black/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 hover:border-[#EC4899] transition-all duration-300 cursor-pointer" data-modal-type="team" data-modal-id="sherah" onclick="openTeamPopup('sherah')" tabindex="0" role="button" aria-label="View Sherah David Portfolio">
-                    <div class="relative">
-                        <img src="sherah.jpg" alt="Sherah David" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div class="flex space-x-4">
-                                <a href="https://www.facebook.com/sherah.daniels.2025" class="text-white hover:text-[#10B981] transition-colors" aria-label="Facebook profile" title="Facebook profile">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://instagram.com/rae__daniels?igsh=MXU0ZzllM2NjZWpoZQ==" class="text-white hover:text-[#10B981] transition-colors" aria-label="Instagram profile" title="Instagram profile">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="mailto:sherahmigueldaniels@gmail.com" class="text-white hover:text-[#10B981] transition-colors" aria-label="Email" title="Email">
-                                    <i class="fas fa-envelope"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Sherah David</h3>
-                        <p class="text-[#10B981] mb-4">Social & Content Lead</p>
-                        <p class="text-gray-200 text-sm mb-4">
-                            Creative designer with expertise in user-centered design and design systems
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-[#10B981]/20 text-[#10B981] rounded-full text-sm">Figma</span>
-                            <span class="px-3 py-1 bg-[#10B981]/20 text-[#10B981] rounded-full text-sm">Adobe XD</span>
-                            <span class="px-3 py-1 bg-[#10B981]/20 text-[#10B981] rounded-full text-sm">Sketch</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 4 -->
-                <div class="team-card bg-black/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 hover:border-[#F59E0B] transition-all duration-300 cursor-pointer" data-modal-type="team" data-modal-id="emediong" onclick="openTeamPopup('emediong')" tabindex="0" role="button" aria-label="View Emediong Inwek Portfolio">
-                    <div class="relative">
-                        <img src="emediong.jpg" alt="Emediong Inwek" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div class="flex space-x-4">
-                                <a href="https://www.instagram.com/emedionginwek" class="text-white hover:text-[#F59E0B] transition-colors" aria-label="Instagram profile" title="Instagram profile">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://x.com/emedionginwek" class="text-white hover:text-[#F59E0B] transition-colors" aria-label="Twitter profile" title="Twitter profile">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Emediong Inwek</h3>
-                        <p class="text-[#F59E0B] mb-4">UI/UX and Product Designer</p>
-                        <p class="text-gray-200 text-sm mb-4">
-                            Creative designer specializing in user experience and product design
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-[#F59E0B]/20 text-[#F59E0B] rounded-full text-sm">Figma</span>
-                            <span class="px-3 py-1 bg-[#F59E0B]/20 text-[#F59E0B] rounded-full text-sm">Photoshop</span>
-                            <span class="px-3 py-1 bg-[#F59E0B]/20 text-[#F59E0B] rounded-full text-sm">Adobe XD</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 5 -->
-                <div class="team-card bg-black/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 hover:border-[#DC2626] transition-all duration-300 cursor-pointer" data-modal-type="team" data-modal-id="dorcas" onclick="openTeamPopup('dorcas')" tabindex="0" role="button" aria-label="View Dorcas Johnson Portfolio">
-                    <div class="relative">
-                        <img src="dorcas.jpg" alt="Dorcas Johnson" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div class="flex space-x-4">
-                                <a href="https://www.linkedin.com/in/dorcas-johnson-359589275" class="text-white hover:text-[#DC2626] transition-colors" aria-label="LinkedIn profile" title="LinkedIn profile">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                                <a href="https://github.com/deejonsen" class="text-white hover:text-[#DC2626] transition-colors" aria-label="GitHub profile" title="GitHub profile">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Dorcas Johnson</h3>
-                        <p class="text-[#DC2626] mb-4">Cybersecurity Expert</p>
-                        <p class="text-gray-200 text-sm mb-4">
-                            Cybersecurity specialist with expertise in penetration testing, ethical hacking, and digital forensics
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-[#DC2626]/20 text-[#DC2626] rounded-full text-sm">Penetration Testing</span>
-                            <span class="px-3 py-1 bg-[#DC2626]/20 text-[#DC2626] rounded-full text-sm">Ethical Hacking</span>
-                            <span class="px-3 py-1 bg-[#DC2626]/20 text-[#DC2626] rounded-full text-sm">Digital Forensics</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Team Member 6 - Itoro Umoette -->
-                <div class="team-card bg-black/50 backdrop-blur-sm rounded-xl overflow-hidden border border-gray-800 hover:border-[#8B5CF6] transition-all duration-300 cursor-pointer" data-modal-type="team" data-modal-id="itoro" onclick="openTeamPopup('itoro')" tabindex="0" role="button" aria-label="View Itoro Umoette Portfolio">
-                    <div class="relative">
-                        <img src="itoro.jpg" alt="Itoro Umoette" class="w-full h-64 object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
-                            <div class="flex space-x-4">
-                                <a href="https://facebook.com/itoro.umoette" class="text-white hover:text-[#8B5CF6] transition-colors" aria-label="Facebook profile" title="Facebook profile">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://x.com/itoro_umoette" class="text-white hover:text-[#8B5CF6] transition-colors" aria-label="Twitter profile" title="Twitter profile">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                                <a href="https://instagram.com/itoro_umoette" class="text-white hover:text-[#8B5CF6] transition-colors" aria-label="Instagram profile" title="Instagram profile">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://linkedin.com/in/itoro-umoette" class="text-white hover:text-[#8B5CF6] transition-colors" aria-label="LinkedIn profile" title="LinkedIn profile">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-2">Itoro Umoette</h3>
-                        <p class="text-[#8B5CF6] mb-4">PR Manager</p>
-                        <p class="text-gray-200 text-sm mb-4">
-                            Strategic PR professional with expertise in brand communication and digital marketing
-                        </p>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="px-3 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] rounded-full text-sm">Media Relations</span>
-                            <span class="px-3 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] rounded-full text-sm">Brand Strategy</span>
-                            <span class="px-3 py-1 bg-[#8B5CF6]/20 text-[#8B5CF6] rounded-full text-sm">Digital PR</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <!-- <section id="testimonials" class="container mx-auto py-16 px-4 md:px-6">
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 font-plus-jakarta">Client Success Stories</h2>
-                <p class="text-gray-200 text-lg">
-                    Hear what our clients have to say about working with Resconate
-                </p>
-            </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-                <div class="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#6366F1] transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-[#6366F1]/20 flex items-center justify-center text-[#6366F1] font-bold text-xl">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="ml-4">
-                            <div class="flex text-yellow-400 mb-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-sm text-gray-400">Tech Startup</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-200 mb-6">"Resconate transformed our business with their innovative web platform. The team's technical expertise and attention to detail resulted in a 200% increase in user engagement."</p>
-                    <div class="flex items-center">
-                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="John Smith" class="w-12 h-12 rounded-full object-cover">
-                        <div class="ml-4">
-                            <h4 class="font-bold">John Smith</h4>
-                            <p class="text-sm text-gray-500">CEO, TechStart</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#EC4899] transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-[#EC4899]/20 flex items-center justify-center text-[#EC4899] font-bold text-xl">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="ml-4">
-                            <div class="flex text-yellow-400 mb-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-sm text-gray-400">E-commerce</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-200 mb-6">"The mobile app developed by Resconate has revolutionized our customer experience. Their team's dedication to quality and timely delivery exceeded our expectations."</p>
-                    <div class="flex items-center">
-                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Sarah Johnson" class="w-12 h-12 rounded-full object-cover">
-                        <div class="ml-4">
-                            <h4 class="font-bold">Sarah Johnson</h4>
-                            <p class="text-sm text-gray-500">Founder, ShopEasy</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800 hover:border-[#6366F1] transition-all duration-300">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 rounded-full bg-[#6366F1]/20 flex items-center justify-center text-[#6366F1] font-bold text-xl">
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <div class="ml-4">
-                            <div class="flex text-yellow-400 mb-1">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <p class="text-sm text-gray-400">Non-Profit</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-200 mb-6">"Resconate's team went above and beyond to create a platform that perfectly serves our community's needs. Their commitment to understanding our mission made all the difference."</p>
-                    <div class="flex items-center">
-                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Michael Brown" class="w-12 h-12 rounded-full object-cover">
-                        <div class="ml-4">
-                            <h4 class="font-bold">Michael Brown</h4>
-                            <p class="text-sm text-gray-500">Director, CommunityFirst</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
-        <!-- Contact Section -->
-        <section id="contact" class="container mx-auto py-16 px-4 md:px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 font-plus-jakarta">Ready to Transform Your Business?</h2>
-                    <p class="text-gray-200 text-lg max-w-3xl mx-auto">
-                        Let's discuss how we can help you achieve your digital goals. Fill out the form below and we'll get back to you within 24 hours.
-                    </p>
-                </div>
-
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                    <!-- Contact Form -->
-                    <div class="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800">
-                      <!--  <form id="contactForm"  onsubmit="emailSend()" class="space-y-6" enctype="multipart/form-data">
-                      --> <div>
-                                <label for="name" class="block text-sm font-medium text-gray-300 mb-2">Name</label>
-                                <input type="text" id="name" name="name" required
-                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-white">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">Email</label>
-                                <input type="email" id="email" name="email" required
-                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-white">
-                            </div>
-                            <div>
-                                <label for="company" class="block text-sm font-medium text-gray-300 mb-2">Company (Optional)</label>
-                                <input type="text" id="company" name="company"
-                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-white">
-                            </div>
-                            <div>
-                                <label for="projectType" class="block text-sm font-medium text-gray-300 mb-2">Project Type</label>
-                                <select id="projectType" name="projectType" required
-                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-white">
-                                    <option value="">Select a project type</option>
-                                    <option value="web">Web Development</option>
-                                    <option value="mobile">Mobile App Development</option>
-                                    <option value="design">UI/UX Design</option>
-                                    <option value="marketing">Digital Marketing</option>
-                                    <option value="cloud">Cloud Solutions</option>
-                                    <option value="consulting">Consulting Services</option>
-                                    <option value="ecommerce">Product or UI/UX Design</option>
-                                    <option value="other">Other</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="budget" class="block text-sm font-medium text-gray-300 mb-2">Budget Range</label>
-                                <select id="budget" name="budget" required
-                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-white">
-                                    <option value="">Select a budget range</option>
-                                    <option value="small">₦10,000 - ₦50,000</option>
-                                    <option value="medium">₦50,000 - ₦200,000</option>
-                                    <option value="large">₦200,000 - ₦500,000</option>
-                                    <option value="enterprise">₦500,000+</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="timeline" class="block text-sm font-medium text-gray-300 mb-2">Desired Project Timeline</label>
-                                <select id="timeline" name="timeline" required
-                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-white">
-                                    <option value="">Select a timeline</option>
-                                    <option value="2weeks">2 weeks</option>
-                                    <option value="1month">1 month</option>
-                                    <option value="2months">2 months</option>
-                                    <option value="3months">3 months</option>
-                                    <option value="4months">4 months</option>
-                                    <option value="5months">5 months</option>
-                                    <option value="6months">6 months</option>
-                                </select>
-                            </div>
-                            <div>
-                                <label for="file" class="block text-sm font-medium text-gray-300 mb-2">Project Brief / Attachment (Optional)</label>
-                                <input type="file" id="file" name="file" accept=".pdf,.doc,.docx,image/*"
-                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white">
-                                <span class="text-xs text-gray-400">Accepted: PDF, DOC, DOCX, Images</span>
-                            </div>
-                            <div>
-                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">Message</label>
-                                <textarea id="message" name="message" rows="4" required
-                                    class="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg focus:ring-2 focus:ring-[#6366F1] focus:border-transparent text-white"></textarea>
-                            </div>
-                            <button onclick="emailSend()"
-                                class="w-full bg-gradient-to-r from-[#6366F1] to-[#EC4899] text-white px-8 py-3 rounded-lg hover:opacity-90 transition-opacity">
-                                <i class="fab fa-whatsapp mr-2"></i>Send via WhatsApp
-                            </button>
-                        </form>
-                <script>
-                    function emailSend() {
-                        // Get form values
-                        var name = document.getElementById('name').value;
-                        var email = document.getElementById('email').value;
-                        var comp = document.getElementById('company').value;
-                        var projectType = document.getElementById('projectType').value;
-                        var budget = document.getElementById('budget').value;
-                        var timeline = document.getElementById('timeline').value;
-                        var message = document.getElementById('message').value;
-                        
-                        // Validate required fields
-                        if (!name || !email || !projectType || !budget || !timeline || !message) {
-                            alert('Please fill in all required fields');
-                            return;
-                        }
-
-                        // Format the message for WhatsApp
-                        var whatsappMessage = `*New Project Inquiry from Resconate Website*
-
-*Name:* ${name}
-*Email:* ${email}
-${comp ? `*Company:* ${comp}` : ''}
-*Project Type:* ${projectType}
-*Budget Range:* ${budget}
-*Timeline:* ${timeline}
-*Message:* ${message}
-
-*Contact Information:*
-📧 Email: ${email}
-📱 Phone: ${comp ? 'Company provided' : 'Not provided'}
-
----
-Sent from Resconate Website Contact Form`;
-
-                        // Encode the message for URL
-                        var encodedMessage = encodeURIComponent(whatsappMessage);
-                        
-                        // Create WhatsApp URL with your number
-                        var whatsappURL = `https://wa.me/2349072415907?text=${encodedMessage}`;
-                        
-                        // Open WhatsApp in new tab
-                        window.open(whatsappURL, '_blank');
-                        
-                        // Show success message
-                        alert('Redirecting to WhatsApp... Please send the message to complete your inquiry.');
-                    }
-                </script>
-            </div>
-
-                    <!-- Contact Information -->
-                    <div class="space-y-8">
-                        <div class="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800">
-                            <h3 class="text-xl font-bold mb-6">Contact Information</h3>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <div class="w-10 h-10 rounded-full bg-[#6366F1]/20 flex items-center justify-center text-[#6366F1]">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="font-medium text-gray-200">Email</h4>
-                                        <a href="mailto:inimfonudoh2004@gmail.com" class="text-gray-400 hover:text-[#6366F1] transition-colors">
-                                            inimfonudoh2004@gmail.com
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="w-10 h-10 rounded-full bg-[#EC4899]/20 flex items-center justify-center text-[#EC4899]">
-                                        <i class="fas fa-phone"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="font-medium text-gray-200">Phone</h4>
-                                        <a href="tel:+2348066023759" class="text-gray-400 hover:text-[#EC4899] transition-colors">
-                                            +234(8066023759)
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="w-10 h-10 rounded-full bg-[#6366F1]/20 flex items-center justify-center text-[#6366F1]">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="font-medium text-gray-200">Location</h4>
-                                        <p class="text-gray-400">
-                                            Plot 51 G-Line, Ewet Housing Estate<br>
-                                            Uyo, Akwa Ibom<br>
-                                            Nigeria
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bg-black/50 backdrop-blur-sm p-8 rounded-xl border border-gray-800">
-                            <h3 class="text-xl font-bold mb-6">Follow Us</h3>
-                            <div class="flex space-x-4">
-                                <a href="https://www.facebook.com/resconate" class="w-10 h-10 rounded-full bg-[#1877F2]/20 flex items-center justify-center text-[#1877F2] hover:bg-[#1877F2] hover:text-white transition-colors">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                                <a href="https://www.instagram.com/resconate" class="w-10 h-10 rounded-full bg-[#E4405F]/20 flex items-center justify-center text-[#E4405F] hover:bg-[#E4405F] hover:text-white transition-colors">
-                                    <i class="fab fa-instagram"></i>
-                                </a>
-                                <a href="https://www.linkedin.com/in/inimfon-udoh-b5b569222/" class="w-10 h-10 rounded-full bg-[#0A66C2]/20 flex items-center justify-center text-[#0A66C2] hover:bg-[#0A66C2] hover:text-white transition-colors">
-                                    <i class="fab fa-linkedin-in"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
         <footer class="site-footer border-t border-gray-900/70 bg-black/80 backdrop-blur-sm">
-            <div class="container mx-auto py-16 px-4 md:px-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-                    <div>
-                        <a href="#home" class="flex items-center gap-3 mb-4">
-                            <img src="resconate-logo.png" alt="Resconate" class="w-10 h-10 rounded-full object-cover">
-                            <span class="text-xl font-plus-jakarta font-semibold text-white">Resconate</span>
+            <div class="container mx-auto px-4 md:px-8 py-12">
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="#home" class="footer-logo">
+                            <img src="resconate-logo.png" alt="Resconate logo">
+                            <span>Resconate</span>
                         </a>
-                        <p class="text-sm text-gray-400 leading-relaxed">
-                            A dual engine organisation delivering premium digital products and a full-stack HR platform for growth teams across Africa. Strategy, execution, compliance, and culture in one ecosystem.
-                        </p>
+                        <p>Digital products and HR infrastructure designed to move ambitious African teams forward.</p>
                     </div>
-                    <div>
-                        <h4 class="text-white font-semibold text-lg mb-4">HR Platform</h4>
-                        <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="hr-login.html" class="footer-link">HR Portal Login</a></li>
-                            <li><a href="admin-dashboard.html" class="footer-link">Admin Dashboard</a></li>
-                            <li><a href="hr-dashboard.html" class="footer-link">HR Analytics Dashboard</a></li>
-                            <li><a href="employee-login.html" class="footer-link">Employee Login</a></li>
-                            <li><a href="employee-portal.html" class="footer-link">Employee Self-Service</a></li>
-                            <li><a href="hr-forgot.html" class="footer-link">Password Recovery</a></li>
-                        </ul>
+                    <div class="footer-nav">
+                        <span class="footer-heading">Navigate</span>
+                        <div class="footer-links">
+                            <a href="#agency-services">Value</a>
+                            <a href="#hr-platform">Solutions</a>
+                            <a href="#proof">Proof</a>
+                            <a href="#contact">Contact</a>
+                        </div>
                     </div>
-                    <div>
-                        <h4 class="text-white font-semibold text-lg mb-4">HR Modules</h4>
-                        <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="recruitment-system.html" class="footer-link">Recruitment & ATS</a></li>
-                            <li><a href="payroll-management.html" class="footer-link">Payroll Automation</a></li>
-                            <li><a href="performance-management.html" class="footer-link">Performance & OKRs</a></li>
-                            <li><a href="banking-integration.html" class="footer-link">Banking Integration</a></li>
-                            <li><a href="compliance-reporting.html" class="footer-link">Compliance Reporting</a></li>
-                            <li><a href="company-registration.html" class="footer-link">Company Registration</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="text-white font-semibold text-lg mb-4">Agency & Resources</h4>
-                        <ul class="space-y-3 text-sm text-gray-400">
-                            <li><a href="#agency-services" class="footer-link">Digital Agency Studio</a></li>
-                            <li><a href="#projects" class="footer-link">Project Library</a></li>
-                            <li><a href="innie-portfolio.html" class="footer-link">Inimfon Udoh Portfolio</a></li>
-                            <li><a href="mike-portfolio.html" class="footer-link">Michael Nwankwo Portfolio</a></li>
-                            <li><a href="emediong-portfolio.html" class="footer-link">Emediong Inwek Portfolio</a></li>
-                            <li><a href="sherah-portfolio.html" class="footer-link">Sherah David Portfolio</a></li>
-                            <li><a href="dorcas-portfolio.html" class="footer-link">Dorcas Johnson Portfolio</a></li>
-                        </ul>
+                    <div class="footer-nav">
+                        <span class="footer-heading">Platform</span>
+                        <div class="footer-links">
+                            <a href="hr-login.html">HR Portal</a>
+                            <a href="admin-dashboard.html">Admin Console</a>
+                            <a href="employee-login.html">Employee Sign In</a>
+                        </div>
                     </div>
                 </div>
-
-                <div class="mt-12 pt-8 border-t border-gray-900/70 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-sm text-gray-500">
+                <div class="footer-bottom">
                     <p>&copy; <span id="current-year">2024</span> Resconate. All rights reserved.</p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#contact" class="footer-link">Contact</a>
-                        <a href="#ecosystem" class="footer-link">Platform Directory</a>
-                        <a href="#team" class="footer-link">Leadership</a>
-                        <a href="#about" class="footer-link">About Resconate</a>
+                    <div class="footer-bottom-links">
+                        <a href="RESCONATE_DOCUMENTATION.md">Documentation</a>
+                        <a href="mailto:inimfonudoh2004@gmail.com">Support</a>
                     </div>
                 </div>
             </div>
         </footer>
 
-        <!-- Team Member Popup -->
-        <div id="teamPopup" class="team-popup">
-          <div class="team-popup-content">
-            <button class="team-popup-close" onclick="closeTeamPopup()">
-              <i class="fas fa-times"></i>
-            </button>
-            <div id="teamPopupContent">
-              <!-- Team member content will be injected here -->
-            </div>
-          </div>
-        </div>
-
-        <!-- Universal Modal (for all dynamic content) -->
-        <div id="universalModal" class="modal" tabindex="-1" aria-modal="true" role="dialog" style="display:none;">
-          <div class="modal__content" id="universalModalContent">
-            <!-- Content will be injected here -->
-          </div>
-          <button class="modal__close" id="universalModalClose" aria-label="Close modal">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
-
-        <!-- Scroll to Top Button -->
         <button class="scroll-to-top" aria-label="Scroll to top">
             <i class="fas fa-chevron-up"></i>
         </button>
-
 
         <script src="./script.js"></script>
     </main>
 </body>
 </html>
+
