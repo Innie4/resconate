@@ -6,6 +6,7 @@
     <title>Employee Login - Resconate HR</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="frontend-env.js"></script>
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -181,7 +182,7 @@
             hideMessages();
             
             try {
-                const response = await fetch('/api/employee/login', {
+                const response = await fetch(window.apiUrl('/api/employee/login'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -261,7 +262,7 @@
         // Check if already logged in
         document.addEventListener('DOMContentLoaded', async function() {
             try {
-                const response = await fetch('/api/employee/me', {
+                const response = await fetch(window.apiUrl('/api/employee/me'), {
                     credentials: 'include'
                 });
                 

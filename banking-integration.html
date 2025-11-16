@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Banking Integration - Resconate HR Platform</title>
+    <script src="frontend-env.js"></script>
     <style>
         * {
             margin: 0;
@@ -805,7 +806,7 @@
 
         async function loadDashboardStats() {
             try {
-                const response = await fetch('/api/banking/stats');
+                const response = await fetch(window.apiUrl('/api/banking/stats'));
                 const stats = await response.json();
                 
                 document.getElementById('connectedBanks').textContent = stats.connectedBanks || 0;
@@ -819,7 +820,7 @@
 
         async function loadPayments() {
             try {
-                const response = await fetch('/api/banking/payments');
+                const response = await fetch(window.apiUrl('/api/banking/payments'));
                 const payments = await response.json();
                 
                 const tbody = document.getElementById('paymentsTableBody');
@@ -875,7 +876,7 @@
             data.bank_code = currentBank;
             
             try {
-                const response = await fetch('/api/banking/connect', {
+                const response = await fetch(window.apiUrl('/api/banking/connect'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -917,7 +918,7 @@
 
         async function checkBankConnections() {
             try {
-                const response = await fetch('/api/banking/connections');
+                const response = await fetch(window.apiUrl('/api/banking/connections'));
                 const connections = await response.json();
                 
                 connections.forEach(connection => {
@@ -930,7 +931,7 @@
 
         async function processPayroll() {
             try {
-                const response = await fetch('/api/banking/process-payroll', {
+                const response = await fetch(window.apiUrl('/api/banking/process-payroll'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -953,7 +954,7 @@
 
         async function generateTaxReport() {
             try {
-                const response = await fetch('/api/banking/tax-report', {
+                const response = await fetch(window.apiUrl('/api/banking/tax-report'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Performance Management - HR Platform</title>
+    <script src="frontend-env.js"></script>
     <style>
         * {
             margin: 0;
@@ -728,7 +729,7 @@
         // Load dashboard statistics
         async function loadDashboardData() {
             try {
-                const response = await fetch('/api/performance/stats');
+                const response = await fetch(window.apiUrl('/api/performance/stats'));
                 const data = await response.json();
                 
                 document.getElementById('activeGoals').textContent = data.activeGoals;
@@ -746,7 +747,7 @@
         // Load recent activities
         async function loadRecentActivities() {
             try {
-                const response = await fetch('/api/performance/recent-activities');
+                const response = await fetch(window.apiUrl('/api/performance/recent-activities'));
                 const activities = await response.json();
                 
                 const tbody = document.getElementById('recentActivities');
@@ -769,7 +770,7 @@
         // Load goals data
         async function loadGoalsData() {
             try {
-                const response = await fetch('/api/performance/goals');
+                const response = await fetch(window.apiUrl('/api/performance/goals'));
                 const goals = await response.json();
                 
                 const tbody = document.getElementById('goalsTable');
@@ -799,7 +800,7 @@
         // Load reviews data
         async function loadReviewsData() {
             try {
-                const response = await fetch('/api/performance/reviews');
+                const response = await fetch(window.apiUrl('/api/performance/reviews'));
                 const reviews = await response.json();
                 
                 const tbody = document.getElementById('reviewsTable');
@@ -828,7 +829,7 @@
         // Load training data
         async function loadTrainingData() {
             try {
-                const response = await fetch('/api/performance/training');
+                const response = await fetch(window.apiUrl('/api/performance/training'));
                 const training = await response.json();
                 
                 const tbody = document.getElementById('trainingTable');
@@ -878,7 +879,7 @@
         // Load employees for dropdowns
         async function loadEmployees(selectId) {
             try {
-                const response = await fetch('/api/employees');
+                const response = await fetch(window.apiUrl('/api/employees'));
                 const employees = await response.json();
                 
                 const select = document.getElementById(selectId);
@@ -903,7 +904,7 @@
             };
 
             try {
-                const response = await fetch('/api/performance/goals', {
+                const response = await fetch(window.apiUrl('/api/performance/goals'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -937,7 +938,7 @@
             };
 
             try {
-                const response = await fetch('/api/performance/reviews', {
+                const response = await fetch(window.apiUrl('/api/performance/reviews'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -975,7 +976,7 @@
             };
 
             try {
-                const response = await fetch('/api/performance/training', {
+                const response = await fetch(window.apiUrl('/api/performance/training'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)

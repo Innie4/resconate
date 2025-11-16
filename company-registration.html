@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Registration - Resconate HR Platform</title>
+    <script src="frontend-env.js"></script>
     <style>
         * {
             margin: 0;
@@ -380,7 +381,7 @@
             }
             
             try {
-                const response = await fetch('/api/company/register', {
+                const response = await fetch(window.apiUrl('/api/company/register'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

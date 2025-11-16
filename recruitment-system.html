@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recruitment System - Resconate HR Platform</title>
+    <script src="frontend-env.js"></script>
     <style>
         * {
             margin: 0;
@@ -736,7 +737,7 @@
 
         async function loadDashboardStats() {
             try {
-                const response = await fetch('/api/recruitment/stats');
+                const response = await fetch(window.apiUrl('/api/recruitment/stats'));
                 const stats = await response.json();
                 
                 document.getElementById('activeJobs').textContent = stats.activeJobs || 0;
@@ -750,7 +751,7 @@
 
         async function loadJobs() {
             try {
-                const response = await fetch('/api/hr/jobs');
+                const response = await fetch(window.apiUrl('/api/hr/jobs'));
                 const jobs = await response.json();
                 
                 const tbody = document.getElementById('jobsTableBody');
@@ -780,7 +781,7 @@
 
         async function loadCandidates() {
             try {
-                const response = await fetch('/api/hr/candidates');
+                const response = await fetch(window.apiUrl('/api/hr/candidates'));
                 const candidates = await response.json();
                 
                 const container = document.getElementById('candidatesList');
@@ -825,7 +826,7 @@
 
         async function loadInterviews() {
             try {
-                const response = await fetch('/api/hr/interviews');
+                const response = await fetch(window.apiUrl('/api/hr/interviews'));
                 const interviews = await response.json();
                 
                 const tbody = document.getElementById('interviewsTableBody');
@@ -873,7 +874,7 @@
             const data = Object.fromEntries(formData);
             
             try {
-                const response = await fetch('/api/hr/jobs', {
+                const response = await fetch(window.apiUrl('/api/hr/jobs'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -905,7 +906,7 @@
             const data = Object.fromEntries(formData);
             
             try {
-                const response = await fetch('/api/hr/interviews', {
+                const response = await fetch(window.apiUrl('/api/hr/interviews'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -931,7 +932,7 @@
 
         async function populateCandidateSelect() {
             try {
-                const response = await fetch('/api/hr/candidates');
+                const response = await fetch(window.apiUrl('/api/hr/candidates'));
                 const candidates = await response.json();
                 
                 const select = document.getElementById('candidateSelect');
@@ -950,7 +951,7 @@
 
         async function updateCandidateStatus(candidateId, status) {
             try {
-                const response = await fetch(`/api/hr/candidates/${candidateId}/status`, {
+                const response = await fetch(window.apiUrl(`/api/hr/candidates/${candidateId}/status`), {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',

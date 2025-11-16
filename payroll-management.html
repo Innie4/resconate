@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payroll Management - Resconate HR Platform</title>
+    <script src="frontend-env.js"></script>
     <style>
         * {
             margin: 0;
@@ -501,7 +502,7 @@
 
         async function loadDashboardStats() {
             try {
-                const response = await fetch('/api/payroll/stats');
+                const response = await fetch(window.apiUrl('/api/payroll/stats'));
                 const stats = await response.json();
                 
                 document.getElementById('totalEmployees').textContent = stats.totalEmployees || 0;
@@ -515,7 +516,7 @@
 
         async function loadPayrollData() {
             try {
-                const response = await fetch('/api/payroll/history');
+                const response = await fetch(window.apiUrl('/api/payroll/history'));
                 const payrolls = await response.json();
                 
                 const tbody = document.getElementById('payrollTableBody');
@@ -559,7 +560,7 @@
         async function calculatePayrollPreview() {
             try {
                 const month = document.getElementById('payrollMonth').value;
-                const response = await fetch(`/api/payroll/preview?month=${month}`);
+                const response = await fetch(window.apiUrl(`/api/payroll/preview?month=${month}`));
                 const preview = await response.json();
                 
                 const summaryDiv = document.getElementById('payrollSummary');
@@ -595,7 +596,7 @@
         async function processPayroll() {
             try {
                 const month = document.getElementById('payrollMonth').value;
-                const response = await fetch('/api/payroll/process', {
+                const response = await fetch(window.apiUrl('/api/payroll/process'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -621,7 +622,7 @@
 
         async function generatePayslips() {
             try {
-                const response = await fetch('/api/payroll/payslips', {
+                const response = await fetch(window.apiUrl('/api/payroll/payslips'), {
                     method: 'POST'
                 });
 
@@ -640,7 +641,7 @@
                 const period = document.getElementById('reportPeriod').value;
                 const month = document.getElementById('reportMonth').value;
                 
-                const response = await fetch('/api/payroll/tax-report', {
+                const response = await fetch(window.apiUrl('/api/payroll/tax-report'), {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -666,7 +667,7 @@
 
         async function exportPayrollData() {
             try {
-                const response = await fetch('/api/payroll/export');
+                const response = await fetch(window.apiUrl('/api/payroll/export'));
                 const blob = await response.blob();
                 const url = window.URL.createObjectURL(blob);
                 const a = document.createElement('a');

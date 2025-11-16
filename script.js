@@ -426,7 +426,7 @@ class PortfolioApp {
 
     try {
       // Send form data to backend (multipart/form-data, do not set Content-Type)
-      const response = await fetch('/api/contact', {
+      const response = await fetch(window.apiUrl('/api/contact'), {
         method: 'POST',
         body: formData
       });
@@ -681,7 +681,7 @@ class PortfolioApp {
     let allProjects = [];
 
     // Fetch projects from backend
-    fetch('/api/projects')
+    fetch(window.apiUrl('/api/projects'))
       .then(res => res.json())
       .then(projects => {
         allProjects = projects;

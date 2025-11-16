@@ -6,7 +6,9 @@
   "scripts": {
     "build": "npm run build:prod",
     "build:prod": "node ./node_modules/tailwindcss/lib/cli.js -i ./input.css -o ./dist/output.css --minify",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node dev-server.js",
+    "serve:port": "PORT=3000 node dev-server.js"
   },
   "keywords": [],
   "author": "",

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Compliance & Reporting - HR Platform</title>
+    <script src="frontend-env.js"></script>
     <style>
         * {
             margin: 0;
@@ -785,7 +786,7 @@
         // Load dashboard statistics
         async function loadDashboardData() {
             try {
-                const response = await fetch('/api/compliance/stats');
+                const response = await fetch(window.apiUrl('/api/compliance/stats'));
                 const data = await response.json();
                 
                 document.getElementById('activePolicies').textContent = data.activePolicies;
@@ -815,7 +816,7 @@
         // Load recent activities
         async function loadRecentActivities() {
             try {
-                const response = await fetch('/api/compliance/recent-activities');
+                const response = await fetch(window.apiUrl('/api/compliance/recent-activities'));
                 const activities = await response.json();
                 
                 const tbody = document.getElementById('recentActivities');
@@ -838,7 +839,7 @@
         // Load policies data
         async function loadPoliciesData() {
             try {
-                const response = await fetch('/api/compliance/policies');
+                const response = await fetch(window.apiUrl('/api/compliance/policies'));
                 const policies = await response.json();
                 
                 const tbody = document.getElementById('policiesTable');
@@ -864,7 +865,7 @@
         // Load documents data
         async function loadDocumentsData() {
             try {
-                const response = await fetch('/api/compliance/documents');
+                const response = await fetch(window.apiUrl('/api/compliance/documents'));
                 const documents = await response.json();
                 
                 const container = document.getElementById('documentsList');
@@ -901,7 +902,7 @@
                     yearSelect.innerHTML += `<option value="${year}" ${year === currentYear ? 'selected' : ''}>${year}</option>`;
                 }
 
-                const response = await fetch('/api/compliance/reports');
+                const response = await fetch(window.apiUrl('/api/compliance/reports'));
                 const reports = await response.json();
                 
                 const tbody = document.getElementById('reportsTable');
@@ -982,7 +983,7 @@
             };
 
             try {
-                const response = await fetch('/api/compliance/policies', {
+                const response = await fetch(window.apiUrl('/api/compliance/policies'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(formData)
@@ -1013,7 +1014,7 @@
             formData.append('file', document.getElementById('documentFile').files[0]);
 
             try {
-                const response = await fetch('/api/compliance/documents', {
+                const response = await fetch(window.apiUrl('/api/compliance/documents'), {
                     method: 'POST',
                     body: formData
                 });
@@ -1041,7 +1042,7 @@
             const month = document.getElementById('reportMonth').value;
 
             try {
-                const response = await fetch('/api/compliance/generate-report', {
+                const response = await fetch(window.apiUrl('/api/compliance/generate-report'), {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ reportType, period, year, month })
