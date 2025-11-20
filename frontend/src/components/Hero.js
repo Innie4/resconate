@@ -62,7 +62,7 @@ const Hero = () => {
           <div className="hero__content" data-animate="fade-up">
             <span className="hero__badge">Product Studio × HR Flow</span>
             <h1 className="hero__title">
-              Build magnetic products. Run people operations without drag.
+              Build magnetic products.<br />Run people operations without drag.
             </h1>
             <p className="hero__subtitle">
               Resconate pairs a venture-ready product studio with a compliant HR platform so your brand, product, and teams move in one rhythm.

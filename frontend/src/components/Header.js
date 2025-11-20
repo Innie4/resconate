@@ -23,6 +23,29 @@ const Header = () => {
     }
   }, [isMobileMenuOpen]);
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const mobileMenu = document.getElementById('mobile-menu');
+      const hamburgerButton = document.querySelector('.header__mobile-toggle');
+      
+      if (isMobileMenuOpen && 
+          mobileMenu && 
+          !mobileMenu.contains(event.target) && 
+          hamburgerButton && 
+          !hamburgerButton.contains(event.target)) {
+        closeMobileMenu();
+      }
+    };
+
+    if (isMobileMenuOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isMobileMenuOpen]);
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -35,6 +58,14 @@ const Header = () => {
     <>
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="header__container">
+          <button 
+            className="header__mobile-toggle" 
+            aria-label="Open mobile menu"
+            onClick={toggleMobileMenu}
+            aria-expanded={isMobileMenuOpen}
+          >
+            <i className="fas fa-bars"></i>
+          </button>
           <a href="#home" className="header__brand" onClick={(e) => handleAnchorClick(e, 'home')}>
             <img src="/resconate-logo.png" alt="Resconate Logo" className="header__logo" />
             <span>Resconate</span>
@@ -55,43 +86,38 @@ const Header = () => {
             <a href="#contact" className="btn btn-secondary header__cta hidden md:inline-flex" onClick={(e) => handleAnchorClick(e, 'contact')} data-analytics="header-cta-contact">
               Book a Discovery Call
             </a>
-            <button 
-              className="header__mobile-toggle" 
-              aria-label="Open mobile menu"
-              onClick={toggleMobileMenu}
-              aria-expanded={isMobileMenuOpen}
-            >
-              <i className="fas fa-bars"></i>
-            </button>
           </div>
         </div>
       </header>
 
       <div id="mobile-menu" className={`mobile-menu ${isMobileMenuOpen ? 'active' : ''}`}>
-        <button 
-          className="mobile-menu__close" 
-          aria-label="Close mobile menu"
-          onClick={closeMobileMenu}
-        >
-          <i className="fas fa-times"></i>
-        </button>
-        <div className="mobile-menu__content">
-          <nav className="mobile-menu__nav">
-            <ul className="mobile-menu__nav-list">
-              <li><a href="#home" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'home'); closeMobileMenu(); }}>Overview</a></li>
-              <li><a href="#agency-services" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'agency-services'); closeMobileMenu(); }}>Value</a></li>
-              <li><a href="#hr-platform" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'hr-platform'); closeMobileMenu(); }}>Solutions</a></li>
-              <li><a href="#proof" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'proof'); closeMobileMenu(); }}>Proof</a></li>
-              <li><a href="#contact" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'contact'); closeMobileMenu(); }}>Contact</a></li>
-            </ul>
-          </nav>
-          <div className="mobile-menu__actions">
-            <Link to="/hr-login" className="btn btn-primary w-full mb-3" data-analytics="mobile-menu-hr-login" onClick={closeMobileMenu}>
-              Launch HR Portal
-            </Link>
-            <Link to="/employee-login" className="btn btn-secondary w-full" data-analytics="mobile-menu-employee-login" onClick={closeMobileMenu}>
-              Employee Sign In
-            </Link>
+        <div className="mobile-menu__backdrop" onClick={closeMobileMenu}></div>
+        <div className="mobile-menu__sidebar">
+          <button 
+            className="mobile-menu__close" 
+            aria-label="Close mobile menu"
+            onClick={closeMobileMenu}
+          >
+            <i className="fas fa-times"></i>
+          </button>
+          <div className="mobile-menu__content">
+            <nav className="mobile-menu__nav">
+              <ul className="mobile-menu__nav-list">
+                <li><a href="#home" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'home'); closeMobileMenu(); }}>Overview</a></li>
+                <li><a href="#agency-services" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'agency-services'); closeMobileMenu(); }}>Value</a></li>
+                <li><a href="#hr-platform" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'hr-platform'); closeMobileMenu(); }}>Solutions</a></li>
+                <li><a href="#proof" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'proof'); closeMobileMenu(); }}>Proof</a></li>
+                <li><a href="#contact" className="mobile-menu__nav-link" onClick={(e) => { handleAnchorClick(e, 'contact'); closeMobileMenu(); }}>Contact</a></li>
+              </ul>
+            </nav>
+            <div className="mobile-menu__actions">
+              <Link to="/hr-login" className="btn btn-primary w-full mb-3" data-analytics="mobile-menu-hr-login" onClick={closeMobileMenu}>
+                Launch HR Portal
+              </Link>
+              <Link to="/employee-login" className="btn btn-secondary w-full" data-analytics="mobile-menu-employee-login" onClick={closeMobileMenu}>
+                Employee Sign In
+              </Link>
+            </div>
           </div>
         </div>
       </div>

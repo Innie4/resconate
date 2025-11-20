@@ -79,7 +79,7 @@ const HRLogin = () => {
             <p className="text-gray-600">Sign in to access your HR dashboard</p>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-8">
+          <div className="hr-login-form">
             <form onSubmit={handleSubmit}>
               <div className="mb-6">
                 <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
