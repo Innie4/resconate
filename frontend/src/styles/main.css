@@ -4164,3 +4164,123 @@ select.error {
     padding: 2.5rem;
   }
 }
+
+/* HR Login Text Styling */
+.hr-login-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #6366F1, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hr-login-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #6366F1, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.8;
+}
+
+/* HR Login Label Styling */
+.hr-login-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #6366F1, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hr-login-checkbox-label {
+  margin-left: 0.5rem;
+  font-size: 0.875rem;
+  background: linear-gradient(135deg, #6366F1, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.8;
+}
+
+.hr-login-forgot-link {
+  font-size: 0.875rem;
+  background: linear-gradient(135deg, #6366F1, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.hr-login-forgot-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
+
+/* HR Login Input Styling */
+.hr-login-input {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 2.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  font-size: 0.9375rem;
+  transition: all 0.2s ease;
+  background-color: #ffffff;
+}
+
+.hr-login-input--password {
+  padding-right: 2.5rem;
+}
+
+.hr-login-input:focus {
+  outline: none;
+  border-color: #6366F1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.hr-login-input::placeholder {
+  color: #9ca3af;
+}
+
+/* HR Login CTA Button */
+.hr-login-cta-btn {
+  width: 100%;
+  background: linear-gradient(135deg, #6366F1, #EC4899);
+  color: white;
+  padding: 0.875rem 1.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(99, 102, 241, 0.3), 0 2px 4px -1px rgba(236, 72, 153, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.hr-login-cta-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(99, 102, 241, 0.4), 0 4px 6px -2px rgba(236, 72, 153, 0.3);
+}
+
+.hr-login-cta-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.hr-login-cta-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.hr-login-cta-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3), 0 10px 15px -3px rgba(99, 102, 241, 0.4);
+}

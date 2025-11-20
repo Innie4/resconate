@@ -69,20 +69,20 @@ const HRLogin = () => {
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
       <GlobalNav />
-      <main className="flex items-center justify-center px-4 py-10">
+      <main className="flex items-center justify-center px-4 py-10 min-h-[calc(100vh-80px)] mt-20">
         <div className="max-w-md w-full mx-4">
           <div className="text-center mb-8">
             <div className="mx-auto w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mb-4">
               <i className="fas fa-users text-white text-2xl"></i>
             </div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">HR Portal</h1>
-            <p className="text-gray-600">Sign in to access your HR dashboard</p>
+            <h1 className="hr-login-title">HR Portal</h1>
+            <p className="hr-login-subtitle">Sign in to access your HR dashboard</p>
           </div>
 
           <div className="hr-login-form">
             <form onSubmit={handleSubmit}>
               <div className="mb-6">
-                <label htmlFor="username" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="username" className="hr-login-label">
                   Username
                 </label>
                 <div className="relative">
@@ -92,7 +92,7 @@ const HRLogin = () => {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
-                    className="w-full px-4 py-3 pl-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200"
+                    className="hr-login-input"
                     placeholder="Enter your username"
                   />
                   <i className="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
@@ -100,7 +100,7 @@ const HRLogin = () => {
               </div>
 
               <div className="mb-6">
-                <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="password" className="hr-login-label">
                   Password
                 </label>
                 <div className="relative">
@@ -110,7 +110,7 @@ const HRLogin = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="w-full px-4 py-3 pl-10 pr-10 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition duration-200"
+                    className="hr-login-input hr-login-input--password"
                     placeholder="Enter your password"
                   />
                   <i className="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
@@ -132,9 +132,9 @@ const HRLogin = () => {
                     onChange={(e) => setRememberMe(e.target.checked)}
                     className="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   />
-                  <span className="ml-2 text-sm text-gray-600">Remember me</span>
+                  <span className="hr-login-checkbox-label">Remember me</span>
                 </label>
-                <Link to="/hr-forgot" className="text-sm text-indigo-600 hover:text-indigo-500 transition duration-200">
+                <Link to="/hr-forgot" className="hr-login-forgot-link">
                   Forgot password?
                 </Link>
               </div>
@@ -142,7 +142,7 @@ const HRLogin = () => {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-indigo-600 text-white py-3 px-4 rounded-lg hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition duration-200 font-medium disabled:opacity-50"
+                className="hr-login-cta-btn"
               >
                 {loading ? (
                   <>

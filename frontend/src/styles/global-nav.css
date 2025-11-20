@@ -1,7 +1,19 @@
 /* Global Navigation Styles */
 .global-nav {
-  background: #0b1120;
-  border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 900px) {
+  .global-nav {
+    background: #ffffff;
+  }
+}
+
+@media (min-width: 901px) {
+  .global-nav {
+    background: #ffffff;
+  }
 }
 
 .global-nav__container {
@@ -19,7 +31,10 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  color: #60a5fa;
+  background: linear-gradient(135deg, #6366F1, #EC4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   text-decoration: none;
   font-weight: 600;
   font-size: 16px;
@@ -39,7 +54,7 @@
 }
 
 .global-nav__link {
-  color: #e2e8f0;
+  color: #1f2937;
   font-size: 14px;
   text-decoration: none;
   transition: color 0.2s ease;
@@ -47,7 +62,7 @@
 
 .global-nav__link:hover,
 .global-nav__link.active {
-  color: #38bdf8;
+  color: #6366F1;
 }
 
 @media (max-width: 640px) {
