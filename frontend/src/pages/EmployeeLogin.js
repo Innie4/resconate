@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import GlobalNav from '../components/GlobalNav';
-import { apiUrl } from '../utils/api';
+import { apiUrl, apiFetch, setEmployeeToken, clearTokens } from '../utils/api';
 
 const EmployeeLogin = () => {
   const [username, setUsername] = useState('');
@@ -16,14 +16,13 @@ const EmployeeLogin = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch(apiUrl('/api/employee/me'), {
-          credentials: 'include'
-        });
+        const response = await apiFetch('/api/employee/me');
         if (response.ok) {
           navigate('/employee-portal');
         }
       } catch (error) {
         // User not logged in
+        clearTokens();
       }
     };
     checkAuth();
@@ -45,11 +44,12 @@ const EmployeeLogin = () => {
 
       const data = await response.json();
 
-      if (response.ok) {
+      if (response.ok && data.success && data.token) {
+        setEmployeeToken(data.token, remember);
         setSuccess('Login successful! Redirecting...');
         setTimeout(() => navigate('/employee-portal'), 1000);
       } else {
-        setError(data.message || 'Login failed. Please check your credentials.');
+        setError(data.error || data.message || 'Login failed. Please check your credentials.');
       }
     } catch (error) {
       setError('Network error. Please try again.');
@@ -121,9 +121,9 @@ const EmployeeLogin = () => {
                     Remember me
                   </label>
                 </div>
-                <a href="/hr-forgot" className="text-sm text-blue-600 hover:text-blue-800">
+                <Link to="/hr-forgot" className="text-sm text-blue-600 hover:text-blue-800">
                   Forgot password?
-                </a>
+                </Link>
               </div>
 
               <button

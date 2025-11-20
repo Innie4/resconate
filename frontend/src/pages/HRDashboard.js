@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GlobalNav from '../components/GlobalNav';
-import { apiUrl } from '../utils/api';
+import { apiUrl, apiFetch, clearTokens } from '../utils/api';
 
 const HRDashboard = () => {
   const [activeTab, setActiveTab] = useState('employees');
@@ -11,37 +11,177 @@ const HRDashboard = () => {
     pendingInterviews: 0,
     complianceScore: 0
   });
+  const [employees, setEmployees] = useState([]);
+  const [jobs, setJobs] = useState([]);
+  const [candidates, setCandidates] = useState([]);
+  const [interviews, setInterviews] = useState([]);
+  const [payrollData, setPayrollData] = useState([]);
+  const [performanceData, setPerformanceData] = useState([]);
+  const [complianceData, setComplianceData] = useState([]);
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
     // Check authentication
     const checkAuth = async () => {
       try {
-        const response = await fetch(apiUrl('/api/auth/me'));
+        const response = await apiFetch('/api/auth/me');
         if (!response.ok) {
+          clearTokens();
           navigate('/hr-login');
+          return;
+        }
+        const data = await response.json();
+        if (!data.success) {
+          clearTokens();
+          navigate('/hr-login');
+          return;
         }
       } catch (error) {
+        clearTokens();
         navigate('/hr-login');
+        return;
       }
+      // Load analytics
+      loadAnalytics();
     };
     checkAuth();
-
-    // Load analytics
-    loadAnalytics();
   }, [navigate]);
 
   const loadAnalytics = async () => {
     try {
-      // Placeholder - replace with actual API calls
-      setAnalytics({
-        totalEmployees: 150,
-        activeJobs: 12,
-        pendingInterviews: 8,
-        complianceScore: 95
-      });
+      const response = await apiFetch('/api/analytics');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success && data.data) {
+          setAnalytics(data.data);
+        }
+      }
     } catch (error) {
       console.error('Failed to load analytics:', error);
+      // Fallback to placeholder data
+      setAnalytics({
+        totalEmployees: 0,
+        activeJobs: 0,
+        pendingInterviews: 0,
+        complianceScore: 0
+      });
+    }
+  };
+
+  const handleLogout = () => {
+    clearTokens();
+    navigate('/hr-login');
+  };
+
+  useEffect(() => {
+    if (activeTab === 'employees') {
+      loadEmployees();
+    } else if (activeTab === 'recruitment') {
+      loadRecruitment();
+    } else if (activeTab === 'payroll') {
+      loadPayroll();
+    } else if (activeTab === 'performance') {
+      loadPerformance();
+    } else if (activeTab === 'compliance') {
+      loadCompliance();
+    }
+  }, [activeTab]);
+
+  const loadEmployees = async () => {
+    setLoading(true);
+    try {
+      const response = await apiFetch('/api/employees');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          setEmployees(data.data || []);
+        }
+      }
+    } catch (error) {
+      console.error('Failed to load employees:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadRecruitment = async () => {
+    setLoading(true);
+    try {
+      const [candidatesRes, interviewsRes] = await Promise.all([
+        apiFetch('/api/recruitment/candidates'),
+        apiFetch('/api/recruitment/interviews')
+      ]);
+      if (candidatesRes.ok) {
+        const data = await candidatesRes.json();
+        if (data.success) setCandidates(data.data || []);
+      }
+      if (interviewsRes.ok) {
+        const data = await interviewsRes.json();
+        if (data.success) setInterviews(data.data || []);
+      }
+    } catch (error) {
+      console.error('Failed to load recruitment data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadPayroll = async () => {
+    setLoading(true);
+    try {
+      // For HR view, we'd need an admin endpoint, but for now show message
+      setPayrollData([]);
+    } catch (error) {
+      console.error('Failed to load payroll:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadPerformance = async () => {
+    setLoading(true);
+    try {
+      // For HR view, we'd need an admin endpoint for all employees
+      setPerformanceData([]);
+    } catch (error) {
+      console.error('Failed to load performance:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadCompliance = async () => {
+    setLoading(true);
+    try {
+      const response = await apiFetch('/api/compliance');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          setComplianceData(data.data || []);
+        }
+      }
+    } catch (error) {
+      console.error('Failed to load compliance:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const loadJobs = async () => {
+    setLoading(true);
+    try {
+      const response = await apiFetch('/api/hr/jobs');
+      if (response.ok) {
+        const data = await response.json();
+        if (data.success) {
+          setJobs(data.data || []);
+        }
+      }
+    } catch (error) {
+      console.error('Failed to load jobs:', error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -59,8 +199,11 @@ const HRDashboard = () => {
               <div className="text-sm text-gray-600">
                 <span>Welcome, HR Admin</span>
               </div>
-              <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-secondary transition-colors">
-                <i className="fas fa-user-circle mr-2"></i>Profile
+              <button
+                onClick={handleLogout}
+                className="bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700 transition-colors"
+              >
+                <i className="fas fa-sign-out-alt mr-2"></i>Logout
               </button>
             </div>
           </div>
@@ -125,11 +268,10 @@ const HRDashboard = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm ${
-                    activeTab === tab
+                  className={`whitespace-nowrap py-2 px-1 border-b-2 font-medium text-sm ${activeTab === tab
                       ? 'border-primary text-primary'
                       : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
-                  }`}
+                    }`}
                 >
                   <i className={`fas fa-${tab === 'employees' ? 'users' : tab === 'recruitment' ? 'user-plus' : tab === 'payroll' ? 'money-bill-wave' : tab === 'performance' ? 'chart-bar' : tab === 'banking' ? 'university' : 'shield-alt'} mr-2`}></i>
                   {tab.charAt(0).toUpperCase() + tab.slice(1)}

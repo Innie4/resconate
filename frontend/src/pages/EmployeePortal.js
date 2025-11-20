@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GlobalNav from '../components/GlobalNav';
-import { apiUrl } from '../utils/api';
+import { apiUrl, apiFetch, clearTokens } from '../utils/api';
 
 const EmployeePortal = () => {
   const [activeSection, setActiveSection] = useState('dashboard');
@@ -10,18 +10,23 @@ const EmployeePortal = () => {
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const response = await fetch(apiUrl('/api/employee/me'), {
-          credentials: 'include'
-        });
+        const response = await apiFetch('/api/employee/me');
         if (!response.ok) {
+          clearTokens();
           navigate('/employee-login');
         }
       } catch (error) {
+        clearTokens();
         navigate('/employee-login');
       }
     };
     checkAuth();
   }, [navigate]);
+
+  const handleLogout = () => {
+    clearTokens();
+    navigate('/employee-login');
+  };
 
   const sections = [
     { id: 'profile', icon: 'user', title: 'My Profile', desc: 'View & update details' },
@@ -43,7 +48,7 @@ const EmployeePortal = () => {
             <div className="flex items-center space-x-4">
               <span className="text-white">Welcome, Employee</span>
               <button
-                onClick={() => navigate('/employee-login')}
+                onClick={handleLogout}
                 className="bg-white bg-opacity-20 text-white px-4 py-2 rounded-lg hover:bg-opacity-30 transition-colors"
               >
                 <i className="fas fa-sign-out-alt mr-2"></i>Logout

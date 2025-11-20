@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import GlobalNav from '../components/GlobalNav';
-import { apiUrl } from '../utils/api';
+import { apiUrl, apiFetch, setToken, clearTokens } from '../utils/api';
 
 const AdminDashboard = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -17,9 +17,16 @@ const AdminDashboard = () => {
 
   const checkAuth = async () => {
     try {
-      const response = await fetch(apiUrl('/api/auth/me'));
+      const response = await apiFetch('/api/auth/me');
       if (response.ok) {
-        setIsAuthenticated(true);
+        const data = await response.json();
+        if (data.success) {
+          setIsAuthenticated(true);
+        } else {
+          setIsAuthenticated(false);
+        }
+      } else {
+        setIsAuthenticated(false);
       }
     } catch (error) {
       setIsAuthenticated(false);
@@ -35,12 +42,14 @@ const AdminDashboard = () => {
       const response = await fetch(apiUrl('/api/auth/login'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        credentials: 'include',
         body: JSON.stringify(loginForm)
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (data.success && data.token) {
+        setToken(data.token, true);
         setIsAuthenticated(true);
       } else {
         setError(data.error || 'Login failed');
@@ -125,6 +134,7 @@ const AdminDashboard = () => {
               <span className="text-sm text-gray-600">Welcome, Admin</span>
               <button
                 onClick={() => {
+                  clearTokens();
                   setIsAuthenticated(false);
                   navigate('/');
                 }}

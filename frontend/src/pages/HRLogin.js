@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import GlobalNav from '../components/GlobalNav';
-import { apiUrl } from '../utils/api';
+import { apiUrl, apiFetch, setToken, clearTokens } from '../utils/api';
 
 const HRLogin = () => {
   const [username, setUsername] = useState('');
@@ -17,7 +17,7 @@ const HRLogin = () => {
     // Check if user is already logged in
     const checkAuth = async () => {
       try {
-        const response = await fetch(apiUrl('/api/auth/me'));
+        const response = await apiFetch('/api/auth/me');
         if (response.ok) {
           const data = await response.json();
           if (data.success && data.admin) {
@@ -26,6 +26,7 @@ const HRLogin = () => {
         }
       } catch (error) {
         // User is not logged in, stay on login page
+        clearTokens();
       }
     };
     checkAuth();
@@ -43,12 +44,14 @@ const HRLogin = () => {
         headers: {
           'Content-Type': 'application/json',
         },
+        credentials: 'include',
         body: JSON.stringify({ username, password })
       });
 
       const data = await response.json();
 
-      if (data.success) {
+      if (data.success && data.token) {
+        setToken(data.token, rememberMe);
         setSuccess('Login successful! Redirecting...');
         setTimeout(() => {
           navigate('/hr-dashboard');
@@ -131,9 +134,9 @@ const HRLogin = () => {
                   />
                   <span className="ml-2 text-sm text-gray-600">Remember me</span>
                 </label>
-                <a href="/hr-forgot" className="text-sm text-indigo-600 hover:text-indigo-500 transition duration-200">
+                <Link to="/hr-forgot" className="text-sm text-indigo-600 hover:text-indigo-500 transition duration-200">
                   Forgot password?
-                </a>
+                </Link>
               </div>
 
               <button
