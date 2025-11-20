@@ -66,6 +66,10 @@ const Header = () => {
           >
             <i className="fas fa-bars"></i>
           </button>
+          <a href="#home" className="header__brand" onClick={(e) => handleAnchorClick(e, 'home')}>
+            <img src="/resconate-logo.png" alt="Resconate Logo" className="header__logo" />
+            <span>Resconate</span>
+          </a>
           <nav className="header__nav" aria-label="Primary navigation">
             <ul className="header__nav-list">
               <li><a href="#home" className="header__nav-link" onClick={(e) => handleAnchorClick(e, 'home')}>Overview</a></li>
@@ -75,10 +79,6 @@ const Header = () => {
               <li><a href="#contact" className="header__nav-link" onClick={(e) => handleAnchorClick(e, 'contact')}>Contact</a></li>
             </ul>
           </nav>
-          <a href="#home" className="header__brand" onClick={(e) => handleAnchorClick(e, 'home')}>
-            <img src="/resconate-logo.png" alt="Resconate Logo" className="header__logo" />
-            <span>Resconate</span>
-          </a>
           <div className="header__actions">
             <Link to="/hr-login" className="btn btn-primary header__cta hidden md:inline-flex" data-analytics="header-cta-hr-login">
               Launch HR Portal
