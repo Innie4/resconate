@@ -67,25 +67,25 @@ const HRLogin = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
+    <div className="hr-login-page">
       <GlobalNav />
-      <main className="flex items-center justify-center px-4 py-10 min-h-[calc(100vh-80px)] mt-20">
-        <div className="max-w-md w-full mx-4">
-          <div className="text-center mb-8">
-            <div className="mx-auto w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center mb-4">
-              <i className="fas fa-users text-white text-2xl"></i>
+      <main className="hr-login-main">
+        <div className="hr-login-container">
+          <div className="hr-login-header">
+            <div className="hr-login-icon-wrapper">
+              <i className="fas fa-users"></i>
             </div>
             <h1 className="hr-login-title">HR Portal</h1>
             <p className="hr-login-subtitle">Sign in to access your HR dashboard</p>
           </div>
 
           <div className="hr-login-form">
-            <form onSubmit={handleSubmit}>
-              <div className="mb-6">
+            <form onSubmit={handleSubmit} className="hr-login-form-inner">
+              <div className="hr-login-field">
                 <label htmlFor="username" className="hr-login-label">
                   Username
                 </label>
-                <div className="relative">
+                <div className="hr-login-input-wrapper">
                   <input
                     type="text"
                     id="username"
@@ -95,15 +95,15 @@ const HRLogin = () => {
                     className="hr-login-input"
                     placeholder="Enter your username"
                   />
-                  <i className="fas fa-user absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                  <i className="fas fa-user hr-login-input-icon"></i>
                 </div>
               </div>
 
-              <div className="mb-6">
+              <div className="hr-login-field">
                 <label htmlFor="password" className="hr-login-label">
                   Password
                 </label>
-                <div className="relative">
+                <div className="hr-login-input-wrapper">
                   <input
                     type={showPassword ? 'text' : 'password'}
                     id="password"
@@ -113,24 +113,25 @@ const HRLogin = () => {
                     className="hr-login-input hr-login-input--password"
                     placeholder="Enter your password"
                   />
-                  <i className="fas fa-lock absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                  <i className="fas fa-lock hr-login-input-icon"></i>
                   <button
                     type="button"
                     onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                    className="hr-login-password-toggle"
+                    aria-label={showPassword ? 'Hide password' : 'Show password'}
                   >
                     <i className={`fas ${showPassword ? 'fa-eye-slash' : 'fa-eye'}`}></i>
                   </button>
                 </div>
               </div>
 
-              <div className="flex items-center justify-between mb-6">
-                <label className="flex items-center">
+              <div className="hr-login-options">
+                <label className="hr-login-checkbox-wrapper">
                   <input
                     type="checkbox"
                     checked={rememberMe}
                     onChange={(e) => setRememberMe(e.target.checked)}
-                    className="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                    className="hr-login-checkbox"
                   />
                   <span className="hr-login-checkbox-label">Remember me</span>
                 </label>
@@ -156,21 +157,21 @@ const HRLogin = () => {
             </form>
 
             {error && (
-              <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700 text-sm">
-                <i className="fas fa-exclamation-circle mr-2"></i>
-                {error}
+              <div className="hr-login-message hr-login-message--error">
+                <i className="fas fa-exclamation-circle"></i>
+                <span>{error}</span>
               </div>
             )}
 
             {success && (
-              <div className="mt-4 p-3 bg-green-50 border border-green-200 rounded-lg text-green-700 text-sm">
-                <i className="fas fa-check-circle mr-2"></i>
-                {success}
+              <div className="hr-login-message hr-login-message--success">
+                <i className="fas fa-check-circle"></i>
+                <span>{success}</span>
               </div>
             )}
           </div>
 
-          <div className="text-center mt-8 text-sm text-gray-500">
+          <div className="hr-login-footer">
             <p>&copy; {new Date().getFullYear()} Resconate Portfolio. All rights reserved.</p>
           </div>
         </div>
