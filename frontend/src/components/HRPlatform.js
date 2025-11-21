@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { handleAnchorClick } from '../utils/scrollUtils';
 
 const HRPlatform = () => {
@@ -39,7 +39,7 @@ const HRPlatform = () => {
             <h2 className="section-title">The suite that keeps shipping momentum and people care connected.</h2>
             <p className="section-lead">Turn on modules as you need them—each one plugs into your existing rituals without slowing teams down.</p>
             <div className="platform-actions">
-              <Link to="/hr-login" className="btn btn-primary">Launch HR Suite</Link>
+              <Link href="/hr-login" className="btn btn-primary">Launch HR Suite</Link>
               <a href="#contact" className="btn btn-ghost" onClick={(e) => handleAnchorClick(e, 'contact')}>Talk to our team</a>
             </div>
           </div>

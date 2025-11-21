@@ -92,4 +92,6 @@ const EmployeePortal = () => {
 
 export default EmployeePortal;
 
+export const dynamic = 'force-dynamic';
+
 

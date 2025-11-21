@@ -292,4 +292,6 @@ const HRDashboard = () => {
 
 export default HRDashboard;
 
+export const dynamic = 'force-dynamic';
+
 

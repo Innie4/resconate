@@ -131,4 +131,6 @@ const HRForgot = () => {
 
 export default HRForgot;
 
+export const dynamic = 'force-dynamic';
+
 

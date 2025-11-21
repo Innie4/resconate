@@ -182,4 +182,6 @@ const AdminDashboard = () => {
 
 export default AdminDashboard;
 
+export const dynamic = 'force-dynamic';
+
 

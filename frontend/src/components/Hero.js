@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { handleAnchorClick } from '../utils/scrollUtils';
 
 const Hero = () => {
@@ -69,7 +69,7 @@ const Hero = () => {
             </p>
             <div className="hero__actions">
               <a href="#contact" className="btn btn-primary" onClick={(e) => handleAnchorClick(e, 'contact')}>Book a Discovery Call</a>
-              <Link to="/hr-login" className="btn btn-secondary">Launch HR Platform</Link>
+              <Link href="/hr-login" className="btn btn-secondary">Launch HR Platform</Link>
               <a href="#hr-platform" className="btn btn-ghost" onClick={(e) => handleAnchorClick(e, 'hr-platform')}>See the Platform</a>
             </div>
             <div className="hero__stats">

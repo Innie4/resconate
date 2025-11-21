@@ -9,6 +9,8 @@ import Contact from '../src/components/Contact';
 import Footer from '../src/components/Footer';
 import ScrollToTop from '../src/components/ScrollToTop';
 
+export const dynamic = 'force-dynamic';
+
 const Home = () => {
   useEffect(() => {
     // Initialize animations for elements with data-animate attribute
