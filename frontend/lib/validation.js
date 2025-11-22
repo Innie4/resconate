@@ -22,3 +22,4 @@ const createValidationMiddleware = (validator) => (req, res, next) => {
 module.exports = { isValidEmail, isValidSalary, validateRequired, validateJob, createValidationMiddleware };
 
 
+

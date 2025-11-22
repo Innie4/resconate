@@ -63,8 +63,16 @@ export const apiFetch = async (endpoint, options = {}) => {
     // Token expired or invalid, clear tokens
     clearTokens();
     if (typeof window !== 'undefined') {
-      if (window.location.pathname !== '/hr-login' && window.location.pathname !== '/employee-login') {
-        window.location.href = '/hr-login';
+      const currentPath = window.location.pathname;
+      // Don't redirect if already on a login page
+      if (currentPath !== '/hr-login' && currentPath !== '/employee-login') {
+        // Check if user is on employee portal or employee-related routes
+        if (currentPath.startsWith('/employee') || currentPath === '/employee-portal') {
+          window.location.href = '/employee-login';
+        } else {
+          // Default to HR login for admin routes
+          window.location.href = '/hr-login';
+        }
       }
     }
   }
@@ -93,5 +101,6 @@ export const fetchTestimonials = async () => {
     return [];
   }
 };
+
 
 

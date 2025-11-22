@@ -1,20 +1,33 @@
-const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 const { pool } = require('./database');
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'resconate-secret';
+const JWT_SECRET = process.env.JWT_SECRET || 'your-secret-key-change-in-production';
 
+// Admin authentication
 const authenticateAdmin = async (req, res, next) => {
   try {
     const token = req.headers.authorization?.split(' ')[1];
-    if (!token) return res.status(401).json({ error: 'No token provided' });
+    if (!token) {
+      return res.status(401).json({ error: 'No token provided' });
+    }
     const decoded = jwt.verify(token, JWT_SECRET);
     const result = await pool.query('SELECT id, username, email, role FROM admins WHERE id=$1', [decoded.adminId]);
-    if (result.rows.length === 0) return res.status(401).json({ error: 'Invalid token' });
+    if (result.rows.length === 0) {
+      return res.status(401).json({ error: 'Invalid token' });
+    }
     req.admin = result.rows[0];
-    next();
-  } catch (e) {
-    return res.status(401).json({ error: 'Unauthorized' });
+    if (next && typeof next === 'function') {
+      await next();
+    }
+  } catch (err) {
+    console.error('Error in authenticateAdmin:', err);
+    if (!res.headersSent) {
+      return res.status(401).json({ 
+        error: 'Unauthorized',
+        message: err.message || 'Invalid token'
+      });
+    }
   }
 };
 
@@ -65,13 +78,20 @@ const forgotPassword = async (req, res) => {
 const authenticateEmployee = async (req, res, next) => {
   try {
     const token = req.headers.authorization?.split(' ')[1];
-    if (!token) return res.status(401).json({ error: 'No token provided' });
+    if (!token) {
+      return res.status(401).json({ error: 'No token provided' });
+    }
     const decoded = jwt.verify(token, JWT_SECRET);
     const result = await pool.query('SELECT id, employee_id, name, email, department, position FROM employees WHERE id=$1', [decoded.employeeId]);
-    if (result.rows.length === 0) return res.status(401).json({ error: 'Invalid token' });
+    if (result.rows.length === 0) {
+      return res.status(401).json({ error: 'Invalid token' });
+    }
     req.employee = result.rows[0];
-    next();
+    if (next && typeof next === 'function') {
+      await next();
+    }
   } catch (e) {
+    console.error('Employee authentication error:', e);
     return res.status(401).json({ error: 'Unauthorized' });
   }
 };
@@ -140,5 +160,3 @@ module.exports = {
   loginEmployee,
   getEmployeeMe
 };
-
-

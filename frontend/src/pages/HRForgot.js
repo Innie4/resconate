@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import GlobalNav from '../components/GlobalNav';
 import { apiUrl } from '../utils/api';
 
@@ -87,7 +87,7 @@ const HRForgot = () => {
             </form>
 
             <div className="mt-6 text-center">
-              <Link to="/hr-login" className="text-indigo-600 hover:text-indigo-500 transition duration-200 text-sm">
+              <Link href="/hr-login" className="text-indigo-600 hover:text-indigo-500 transition duration-200 text-sm">
                 <i className="fas fa-arrow-left mr-2"></i>
                 Back to Login
               </Link>

@@ -4323,7 +4323,7 @@ select.error {
   font-size: 0.9375rem;
   transition: all 0.2s ease;
   background-color: #ffffff;
-  color: #1f2937;
+  color: #111827 !important;
   line-height: 1.5;
   box-sizing: border-box;
 }

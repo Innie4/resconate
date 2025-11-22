@@ -17,15 +17,30 @@ async function handler(req, res) {
   } else if (req.method === 'PUT') {
     return authenticateAdmin(req, res, async () => {
       try {
-        const { name, email, department, position, salary, phone, address, start_date, status } = req.body;
-        const result = await pool.query(
-          'UPDATE employees SET name=$1, email=$2, department=$3, position=$4, salary=$5, phone=$6, address=$7, start_date=$8, status=$9, updated_at=CURRENT_TIMESTAMP WHERE id=$10 RETURNING id, employee_id, name, email, department, position, salary, phone, address, start_date, status',
-          [name, email, department, position, salary, phone, address, start_date, status, id]
-        );
-        if (result.rows.length === 0) return res.status(404).json({ error: 'Employee not found' });
-        res.json({ success: true, data: result.rows[0] });
+        const { name, email, department, position, salary, phone, address, password, start_date, status } = req.body;
+        
+        // If password is provided, hash it and update
+        if (password && password.trim() !== '') {
+          const bcrypt = require('bcryptjs');
+          const password_hash = await bcrypt.hash(password, 10);
+          const result = await pool.query(
+            'UPDATE employees SET name=$1, email=$2, department=$3, position=$4, salary=$5, phone=$6, address=$7, password_hash=$8, start_date=$9, status=$10, updated_at=CURRENT_TIMESTAMP WHERE id=$11 RETURNING id, employee_id, name, email, department, position, salary, phone, address, start_date, status',
+            [name, email, department, position, salary, phone, address, password_hash, start_date, status, id]
+          );
+          if (result.rows.length === 0) return res.status(404).json({ error: 'Employee not found' });
+          res.json({ success: true, data: result.rows[0] });
+        } else {
+          // No password provided, update without changing password
+          const result = await pool.query(
+            'UPDATE employees SET name=$1, email=$2, department=$3, position=$4, salary=$5, phone=$6, address=$7, start_date=$8, status=$9, updated_at=CURRENT_TIMESTAMP WHERE id=$10 RETURNING id, employee_id, name, email, department, position, salary, phone, address, start_date, status',
+            [name, email, department, position, salary, phone, address, start_date, status, id]
+          );
+          if (result.rows.length === 0) return res.status(404).json({ error: 'Employee not found' });
+          res.json({ success: true, data: result.rows[0] });
+        }
       } catch (e) {
-        res.status(500).json({ error: 'Internal server error' });
+        console.error('Error updating employee:', e);
+        res.status(500).json({ error: 'Internal server error', message: e.message });
       }
     });
   } else if (req.method === 'DELETE') {
@@ -45,5 +60,6 @@ async function handler(req, res) {
 }
 
 export default handler;
+
 
 

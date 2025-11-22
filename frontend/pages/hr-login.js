@@ -93,8 +93,9 @@ const HRLogin = () => {
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
-                    className="hr-login-input"
+                    className="hr-login-input text-gray-900"
                     placeholder="Enter your username"
+                    style={{ color: '#111827' }}
                   />
                   <i className="fas fa-user hr-login-input-icon"></i>
                 </div>
@@ -111,8 +112,9 @@ const HRLogin = () => {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    className="hr-login-input hr-login-input--password"
+                    className="hr-login-input hr-login-input--password text-gray-900"
                     placeholder="Enter your password"
+                    style={{ color: '#111827' }}
                   />
                   <i className="fas fa-lock hr-login-input-icon"></i>
                   <button
@@ -182,5 +184,6 @@ const HRLogin = () => {
 };
 
 export default HRLogin;
+
 
 

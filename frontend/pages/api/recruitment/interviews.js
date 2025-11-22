@@ -14,7 +14,12 @@ async function handler(req, res) {
         );
         res.json({ success: true, data: result.rows });
       } catch (e) {
-        res.status(500).json({ error: 'Internal server error' });
+        console.error('Error fetching interviews:', e);
+        res.status(500).json({ 
+          error: 'Internal server error',
+          message: e.message || 'Failed to fetch interviews',
+          details: process.env.NODE_ENV === 'development' ? e.stack : undefined
+        });
       }
     });
   } else if (req.method === 'POST') {
@@ -30,7 +35,12 @@ async function handler(req, res) {
         );
         res.json({ success: true, data: result.rows[0] });
       } catch (e) {
-        res.status(500).json({ error: 'Internal server error' });
+        console.error('Error creating interview:', e);
+        res.status(500).json({ 
+          error: 'Internal server error',
+          message: e.message || 'Failed to create interview',
+          details: process.env.NODE_ENV === 'development' ? e.stack : undefined
+        });
       }
     });
   } else {
@@ -40,5 +50,6 @@ async function handler(req, res) {
 }
 
 export default handler;
+
 
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import GlobalNav from '../components/GlobalNav';
 import { apiUrl, apiFetch, setEmployeeToken, clearTokens } from '../utils/api';
 
@@ -11,14 +12,14 @@ const EmployeeLogin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     const checkAuth = async () => {
       try {
         const response = await apiFetch('/api/employee/me');
         if (response.ok) {
-          navigate('/employee-portal');
+          router.push('/employee-portal');
         }
       } catch (error) {
         // User not logged in
@@ -26,7 +27,7 @@ const EmployeeLogin = () => {
       }
     };
     checkAuth();
-  }, [navigate]);
+  }, [router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -47,7 +48,7 @@ const EmployeeLogin = () => {
       if (response.ok && data.success && data.token) {
         setEmployeeToken(data.token, remember);
         setSuccess('Login successful! Redirecting...');
-        setTimeout(() => navigate('/employee-portal'), 1000);
+        setTimeout(() => router.push('/employee-portal'), 1000);
       } else {
         setError(data.error || data.message || 'Login failed. Please check your credentials.');
       }
@@ -121,7 +122,7 @@ const EmployeeLogin = () => {
                     Remember me
                   </label>
                 </div>
-                <Link to="/hr-forgot" className="text-sm text-blue-600 hover:text-blue-800">
+                <Link href="/hr-forgot" className="text-sm text-blue-600 hover:text-blue-800">
                   Forgot password?
                 </Link>
               </div>

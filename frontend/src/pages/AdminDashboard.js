@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/router';
 import GlobalNav from '../components/GlobalNav';
 import { apiUrl, apiFetch, setToken, clearTokens } from '../utils/api';
 
@@ -9,7 +9,7 @@ const AdminDashboard = () => {
   const [loginForm, setLoginForm] = useState({ username: '', password: '' });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     checkAuth();
@@ -136,7 +136,7 @@ const AdminDashboard = () => {
                 onClick={() => {
                   clearTokens();
                   setIsAuthenticated(false);
-                  navigate('/');
+                  router.push('/');
                 }}
                 className="bg-red-600 text-white px-4 py-2 rounded-md hover:bg-red-700"
               >

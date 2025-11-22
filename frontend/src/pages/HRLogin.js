@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import GlobalNav from '../components/GlobalNav';
 import { apiUrl, apiFetch, setToken, clearTokens } from '../utils/api';
 
@@ -11,7 +12,7 @@ const HRLogin = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
-  const navigate = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     // Check if user is already logged in
@@ -21,7 +22,7 @@ const HRLogin = () => {
         if (response.ok) {
           const data = await response.json();
           if (data.success && data.admin) {
-            navigate('/hr-dashboard');
+            router.push('/hr-dashboard');
           }
         }
       } catch (error) {
@@ -30,7 +31,7 @@ const HRLogin = () => {
       }
     };
     checkAuth();
-  }, [navigate]);
+  }, [router]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -54,7 +55,7 @@ const HRLogin = () => {
         setToken(data.token, rememberMe);
         setSuccess('Login successful! Redirecting...');
         setTimeout(() => {
-          navigate('/hr-dashboard');
+          router.push('/hr-dashboard');
         }, 1500);
       } else {
         setError(data.error || 'Login failed');
@@ -135,7 +136,7 @@ const HRLogin = () => {
                   />
                   <span className="hr-login-checkbox-label">Remember me</span>
                 </label>
-                <Link to="/hr-forgot" className="hr-login-forgot-link">
+                <Link href="/hr-forgot" className="hr-login-forgot-link">
                   Forgot password?
                 </Link>
               </div>

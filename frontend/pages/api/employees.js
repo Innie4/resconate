@@ -5,29 +5,43 @@ async function handler(req, res) {
   if (req.method === 'GET') {
     return authenticateAdmin(req, res, async () => {
       try {
-        const result = await pool.query('SELECT id, employee_id, name, email, department, position, salary, start_date, status FROM employees ORDER BY created_at DESC');
+        const result = await pool.query('SELECT id, employee_id, name, email, department, position, salary, phone, address, start_date, status, (password_hash IS NULL) as needs_password FROM employees ORDER BY created_at DESC');
         res.json({ success: true, data: result.rows });
       } catch (e) {
-        res.status(500).json({ error: 'Internal server error' });
+        console.error('Error fetching employees:', e);
+        res.status(500).json({ error: 'Internal server error', message: e.message });
       }
     });
   } else if (req.method === 'POST') {
     return authenticateAdmin(req, res, async () => {
       try {
-        const { employee_id, name, email, department, position, salary, phone, address, start_date } = req.body;
-        if (!employee_id || !name || !email) {
-          return res.status(400).json({ error: 'employee_id, name, and email are required' });
+        const { name, email, department, position, salary, phone, address, password, start_date } = req.body;
+        if (!name || !email) {
+          return res.status(400).json({ error: 'name and email are required' });
         }
+        if (!password) {
+          return res.status(400).json({ error: 'password is required' });
+        }
+        // Auto-generate employee ID
+        const countResult = await pool.query('SELECT COUNT(*) as count FROM employees');
+        const employeeCount = parseInt(countResult.rows[0].count) + 1;
+        const employee_id = `EMP${String(employeeCount).padStart(6, '0')}`;
+        
+        // Hash password
+        const bcrypt = require('bcryptjs');
+        const password_hash = await bcrypt.hash(password, 10);
+        
         const result = await pool.query(
-          'INSERT INTO employees (employee_id, name, email, department, position, salary, phone, address, start_date) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING id, employee_id, name, email, department, position, salary, start_date, status',
-          [employee_id, name, email, department || null, position || null, salary || null, phone || null, address || null, start_date || null]
+          'INSERT INTO employees (employee_id, name, email, department, position, salary, phone, address, password_hash, start_date) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING id, employee_id, name, email, department, position, salary, start_date, status',
+          [employee_id, name, email, department || null, position || null, salary || null, phone || null, address || null, password_hash, start_date || null]
         );
         res.json({ success: true, data: result.rows[0] });
       } catch (e) {
         if (e.code === '23505') {
-          return res.status(400).json({ error: 'Employee ID or email already exists' });
+          return res.status(400).json({ error: 'Email already exists' });
         }
-        res.status(500).json({ error: 'Internal server error' });
+        console.error('Error creating employee:', e);
+        res.status(500).json({ error: 'Internal server error', message: e.message });
       }
     });
   } else {
@@ -37,5 +51,6 @@ async function handler(req, res) {
 }
 
 export default handler;
+
 
 

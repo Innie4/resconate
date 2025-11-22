@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { handleAnchorClick } from '../utils/scrollUtils';
 
 const Footer = () => {
@@ -28,9 +28,9 @@ const Footer = () => {
           <div className="footer-nav">
             <span className="footer-heading">Platform</span>
             <div className="footer-links">
-              <Link to="/hr-login">HR Portal</Link>
-              <Link to="/admin-dashboard">Admin Console</Link>
-              <Link to="/employee-login">Employee Sign In</Link>
+              <Link href="/hr-login">HR Portal</Link>
+              <Link href="/admin-dashboard">Admin Console</Link>
+              <Link href="/employee-login">Employee Sign In</Link>
             </div>
           </div>
         </div>

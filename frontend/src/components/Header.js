@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { handleAnchorClick } from '../utils/scrollUtils';
 
 const Header = () => {
@@ -80,7 +80,7 @@ const Header = () => {
             </ul>
           </nav>
           <div className="header__actions">
-            <Link to="/hr-login" className="btn btn-primary header__cta hidden md:inline-flex" data-analytics="header-cta-hr-login">
+            <Link href="/hr-login" className="btn btn-primary header__cta hidden md:inline-flex" data-analytics="header-cta-hr-login">
               Launch HR Portal
             </Link>
             <a href="#contact" className="btn btn-secondary header__cta hidden md:inline-flex" onClick={(e) => handleAnchorClick(e, 'contact')} data-analytics="header-cta-contact">
@@ -111,10 +111,10 @@ const Header = () => {
               </ul>
             </nav>
             <div className="mobile-menu__actions">
-              <Link to="/hr-login" className="btn btn-primary w-full mb-3" data-analytics="mobile-menu-hr-login" onClick={closeMobileMenu}>
+              <Link href="/hr-login" className="btn btn-primary w-full mb-3" data-analytics="mobile-menu-hr-login" onClick={closeMobileMenu}>
                 Launch HR Portal
               </Link>
-              <Link to="/employee-login" className="btn btn-secondary w-full" data-analytics="mobile-menu-employee-login" onClick={closeMobileMenu}>
+              <Link href="/employee-login" className="btn btn-secondary w-full" data-analytics="mobile-menu-employee-login" onClick={closeMobileMenu}>
                 Employee Sign In
               </Link>
             </div>
